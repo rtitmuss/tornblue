@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name kicad-keyboard-parts)(type Legacy)(uri "${KIPRJMOD}/kicad-keyboard-parts.pretty/Schematic Library/kicad-keyboard-parts.lib")(options "")(descr ""))
+  (lib (name tornblue)(type Legacy)(uri ${KIPRJMOD}/tornblue.pretty/torn-bt.lib)(options "")(descr ""))
+  (lib (name tornblue-rescue)(type Legacy)(uri ${KIPRJMOD}/tornblue-rescue.lib)(options "")(descr ""))
+)

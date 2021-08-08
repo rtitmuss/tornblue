@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP nRF52840_holyiot_18010
+D nRF52840 BT LE module
+K Bluetooth LE nRF nordic
+F http://www.holyiot.com/tp/2019042516322180424.pdf
+$ENDCMP
+#
+#End Doc Library
