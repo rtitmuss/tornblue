@@ -31,10 +31,13 @@ Rev 0 includes some experimental features, that are subject to change:
 - 2x 3.7v lithium rechargeable battery with JST connector. **SAFETY NOTE: Only use a LiIon battery with over-charging and over-use protection. Check the battery polarity before connecting.**
 - ST link v2 (or similar) and SOIC-8 test clip for programming the bootloader
 - (Optional) 2 x [Panasonic EVQWGD001](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111528&SearchText=Panasonic+EVQWGD001) wheel encoder
-- (Optional) 12 x [WS2812B leds](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111716&SearchText=WS2812B)
+- (Optional) 12 x [WS2812B 5050 leds](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111716&SearchText=WS2812B)
 
+## Build instructions
 
-## Part selection
+You can find full [build instructions](./build.md), including information for the 3d printed case.
+
+## Components
 
 The main components are:
 
@@ -53,15 +56,10 @@ The main components are:
 
 The following projects were used as reference designs.
 
-[ZMK hardware design guide](https://github.com/ebastler/zmk-designguide) (CERN Open Hardware Licence Version 2 - Permissive) - note the battery charging circuit might be wrong, see this information about [TP4056](https://www.best-microcontroller-projects.com/tp4056.html)
-
+[ZMK hardware design guide](https://github.com/ebastler/zmk-designguide) (CERN Open Hardware Licence Version 2 - Permissive) - note the battery charging circuit might be unsafe, see this information about [TP4056](https://www.best-microcontroller-projects.com/tp4056.html)
 [isometria75](https://github.com/ebastler/isometria-75/tree/v2) (BSD 2-Clause License)
-
 [Unified USB type-C PCB](https://github.com/ebastler/unified-usb-pcb) (BSD 2-Clause License)
-
 [Nice!Nano](https://nicekeyboards.com/docs/nice-nano/pinout-schematic)
-
 [nRFMicro](https://github.com/joric/nrfmicro/wiki) (Public domain)
-
 [Adafruit nRF52840](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/downloads) (Creative Commons Attribution, Share-Alike)
 
