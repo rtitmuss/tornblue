@@ -143,14 +143,18 @@ Plug your battery into to the JST PH connector on the underside of the PCB. **Th
 
 There is a 3d printable plate for MX switches. Remember to print and fit this before soldering your switches.
 
-- [Plate.stl](case/wedge/Plate.stl)
+| 5 cols | 6 cols |
+|--|--|
+| [5_Plate.stl](case/wedge/5_Plate.stl) | [6_Plate.stl](case/wedge/6_Plate.stl) |
 
 ### MX Switch Wedge Case
 
 You can 3d print a wedge case for your Tornblue using the follow files:
 
-- [Base.3mf](case/wedge/Base.3mf)
-- [Wall.3mf](case/wedge/Wall.3mf)
+| 5 cols | 6 cols |
+|--|--|
+| [5_Base.3mf](case/wedge/5_Base.3mf) | [6_Base.3mf](case/wedge/6_Base.3mf) |
+| [5_Wall.3mf](case/wedge/5_Wall.3mf) | [6_Wall.3mf](case/wedge/6_Wall.3mf) | 
 
 First print Base.3mf. This is the support for the PCB. *You must print this first before the wall.*
 
