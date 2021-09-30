@@ -489,9 +489,9 @@ Text GLabel 9750 2350 2    50   Input ~ 0
 ROW2
 Text GLabel 9750 2250 2    50   Input ~ 0
 ROW3
-Text GLabel 7800 2950 0    50   Input ~ 0
-COL0
 Text GLabel 7800 3150 0    50   Input ~ 0
+COL0
+Text GLabel 7800 2950 0    50   Input ~ 0
 COL2
 Text GLabel 8400 3850 3    50   Input ~ 0
 COL3
