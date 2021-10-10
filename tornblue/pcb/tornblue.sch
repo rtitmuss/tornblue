@@ -493,9 +493,9 @@ Connection ~ 4300 3450
 Connection ~ 4200 2450
 Wire Wire Line
 	4200 2450 4450 2450
-Text GLabel 12500 3200 0    50   Input ~ 0
-LED2
 Text GLabel 12500 3300 0    50   Input ~ 0
+LED2
+Text GLabel 12500 3200 0    50   Input ~ 0
 LED3
 Wire Wire Line
 	13300 4300 13300 4100
