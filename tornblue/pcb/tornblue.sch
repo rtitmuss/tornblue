@@ -236,21 +236,9 @@ F 3 "" H 12450 7050 50  0001 C CNN
 	1    12450 7050
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 61143221
-P 4850 2950
-F 0 "J1" H 4930 2942 50  0000 L CNN
-F 1 "BATT" H 4930 2851 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 4850 2950 50  0001 C CNN
-F 3 "~" H 4850 2950 50  0001 C CNN
-F 4 "-" H 4850 2950 50  0001 C CNN "LCSC"
-	1    4850 2950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15000 3100 14950 3100
-Text GLabel 4800 2800 2    50   Input ~ 0
+Text GLabel 4800 2650 0    50   Input ~ 0
 VBAT
 $Comp
 L power:PWR_FLAG #FLG01
@@ -426,8 +414,6 @@ Wire Wire Line
 	3150 2650 3450 2650
 Wire Wire Line
 	4200 3000 4300 3000
-Wire Wire Line
-	4650 2450 4650 2800
 $Comp
 L power:+5V #PWR01
 U 1 1 61AA7006
@@ -446,7 +432,6 @@ Wire Wire Line
 	3400 2450 3400 2550
 Wire Wire Line
 	3400 2550 3450 2550
-Connection ~ 4650 2450
 Connection ~ 4450 2450
 Wire Wire Line
 	3150 2650 3150 3450
@@ -485,8 +470,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 2450 4200 2450
 Wire Wire Line
-	4450 2450 4650 2450
-Wire Wire Line
 	3850 3450 4300 3450
 Connection ~ 3850 3450
 Connection ~ 4300 3450
@@ -501,10 +484,6 @@ Wire Wire Line
 	13300 4300 13300 4100
 Wire Wire Line
 	13400 4300 13400 4100
-Wire Wire Line
-	4450 3450 4650 3450
-Wire Wire Line
-	4650 3050 4650 3450
 $Comp
 L Device:D_Schottky_Small D23
 U 1 1 635177F2
@@ -577,19 +556,9 @@ F 4 "C15850" H 7000 3000 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4800 2800 4650 2800
-Wire Wire Line
-	4650 2450 5050 2450
-Connection ~ 4650 2800
-Wire Wire Line
-	4650 2800 4650 2950
-Wire Wire Line
 	5500 2900 5500 2150
 Wire Wire Line
-	4650 3450 5500 3450
-Wire Wire Line
 	5500 3450 5500 3100
-Connection ~ 4650 3450
 Wire Wire Line
 	6250 2550 6200 2550
 Wire Wire Line
@@ -3682,10 +3651,10 @@ Wire Wire Line
 NoConn ~ 14500 8200
 NoConn ~ 14500 8100
 $Comp
-L Device:R_Small R10
+L Device:R_Small R9
 U 1 1 610FC56D
 P 14900 7300
-F 0 "R10" V 15000 7200 50  0000 C CNN
+F 0 "R9" V 15000 7200 50  0000 C CNN
 F 1 "5.1k" V 15000 7350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 14900 7300 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809062031_UNI-ROYAL-Uniroyal-Elec-0805W8F5101T5E_C27834.pdf" H 14900 7300 50  0001 C CNN
@@ -3694,10 +3663,10 @@ F 4 "C27834" H 14900 7300 50  0001 C CNN "LCSC"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R9
+L Device:R_Small R10
 U 1 1 610FB86F
 P 14900 7200
-F 0 "R9" V 14800 7100 50  0000 C CNN
+F 0 "R10" V 14800 7100 50  0000 C CNN
 F 1 "5.1k" V 14800 7250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 14900 7200 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809062031_UNI-ROYAL-Uniroyal-Elec-0805W8F5101T5E_C27834.pdf" H 14900 7200 50  0001 C CNN
@@ -3866,4 +3835,56 @@ F 4 "-" H 3150 5400 50  0001 C CNN "LCSC"
 $EndComp
 Text GLabel 2950 6250 1    50   Input ~ 0
 COL0
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 6380E79A
+P 5050 3050
+F 0 "J5" V 5250 3050 50  0000 R CNN
+F 1 "BATT_PIN" V 5150 3100 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5050 3050 50  0001 C CNN
+F 3 "~" H 5050 3050 50  0001 C CNN
+	1    5050 3050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4450 3450 4650 3450
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 61143221
+P 4750 3050
+F 0 "J1" V 4950 2950 50  0000 L CNN
+F 1 "BATT" V 4850 2900 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 4750 3050 50  0001 C CNN
+F 3 "~" H 4750 3050 50  0001 C CNN
+F 4 "-" H 4750 3050 50  0001 C CNN "LCSC"
+	1    4750 3050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4650 3250 4650 3450
+Connection ~ 4650 3450
+Wire Wire Line
+	4650 3450 5050 3450
+Wire Wire Line
+	5050 3250 5050 3450
+Connection ~ 5050 3450
+Wire Wire Line
+	5050 3450 5500 3450
+Wire Wire Line
+	4950 3250 4850 3250
+Connection ~ 4850 3250
+Wire Wire Line
+	4850 3250 4750 3250
+Connection ~ 4850 2450
+Wire Wire Line
+	4850 2450 5050 2450
+Wire Wire Line
+	4800 2650 4850 2650
+Wire Wire Line
+	4450 2450 4850 2450
+Connection ~ 4850 2650
+Wire Wire Line
+	4850 2650 4850 2450
+Wire Wire Line
+	4850 2650 4850 3250
 $EndSCHEMATC
