@@ -1,4 +1,4 @@
-(module MX_PG1350_EVQWGD001_UD_optional (layer F.Cu) (tedit 61269D43)
+(module MX_PG1350_EVQWGD001_UD_optional (layer F.Cu) (tedit 616AF53D)
   (descr "MX-style keyswitch with support for optional Kailh socket")
   (tags MX,cherry,gateron,kailh,pg1511,socket)
   (fp_text reference SW6 (at -7.1374 8.001 180) (layer F.SilkS)
@@ -59,8 +59,6 @@
   (pad S2 thru_hole circle (at 2.54 -5.08) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.Mask))
   (pad S1 thru_hole circle (at 5 -3.8 180) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask))
   (pad S2 thru_hole circle (at 0 -5.9) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask))
-  (pad S2 thru_hole circle (at -2.54 -5.08 180) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.Mask))
-  (pad S1 thru_hole circle (at 3.81 -2.54 180) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -5.8155 5.3158) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
   (pad D thru_hole circle (at -5.8155 2.8258) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask))
   (pad C thru_hole circle (at -5.8155 0.2858) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask))
@@ -69,6 +67,7 @@
   (pad S2 thru_hole circle (at -5.1905 -7.1842) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask))
   (pad S1 thru_hole circle (at -7.0405 -7.1842) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask))
   (pad S1 thru_hole circle (at 5 -3.8 180) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask))
+  (pad "" np_thru_hole oval (at 5.2832 0 180) (size 2.15 1.7018) (drill oval 2.15 1.7018) (layers *.Cu *.Mask))
   (model "${KIPRJMOD}/grabcad/cherry mx.step"
     (offset (xyz 0 -7.8 -2))
     (scale (xyz 1 1 1))
