@@ -70,9 +70,9 @@ Text GLabel 14300 3250 2    50   Input ~ 0
 ROW_R0
 Text GLabel 14300 3150 2    50   Input ~ 0
 ROW_R1
-Text GLabel 14300 2850 2    50   Input ~ 0
+Text GLabel 11950 4300 2    50   Input ~ 0
 ROW_R2
-Text GLabel 14300 2750 2    50   Input ~ 0
+Text GLabel 11950 4200 2    50   Input ~ 0
 ROW_R3
 Text GLabel 12350 3650 0    50   Input ~ 0
 COL_R0
@@ -96,19 +96,19 @@ Wire Wire Line
 	12350 3350 12650 3350
 Wire Wire Line
 	12350 3250 12650 3250
-Text GLabel 14300 2650 2    50   Input ~ 0
+Text GLabel 11950 4100 2    50   Input ~ 0
 ENC_RA
-Text GLabel 14300 2550 2    50   Input ~ 0
+Text GLabel 11950 4000 2    50   Input ~ 0
 ENC_RB
-Text GLabel 12350 3350 0    50   Input ~ 0
+Text GLabel 14300 2650 2    50   Input ~ 0
 LED_R2
-Text GLabel 12350 3250 0    50   Input ~ 0
+Text GLabel 14300 2750 2    50   Input ~ 0
 LED_R3
 Wire Wire Line
 	13150 4350 13150 4150
 Wire Wire Line
 	13250 4350 13250 4150
-Text GLabel 12350 3150 0    50   Input ~ 0
+Text GLabel 14300 2550 2    50   Input ~ 0
 LED_R1
 Wire Wire Line
 	14250 4250 13550 4250
@@ -183,12 +183,8 @@ Wire Wire Line
 Wire Wire Line
 	11900 7250 11900 7100
 Connection ~ 11900 7100
-NoConn ~ 12400 7650
-NoConn ~ 11400 7850
-Wire Wire Line
-	12450 7850 12400 7850
-Wire Wire Line
-	11400 7650 11350 7650
+NoConn ~ 11400 7650
+NoConn ~ 12400 7850
 Text GLabel 8850 5800 0    50   Input ~ 0
 LED_R1
 Text GLabel 8850 6050 0    50   Input ~ 0
@@ -226,7 +222,7 @@ Wire Wire Line
 Connection ~ 12250 7100
 Wire Wire Line
 	12250 7100 12450 7100
-Text GLabel 11350 7650 0    50   Input ~ 0
+Text GLabel 12450 7650 2    50   Input ~ 0
 USB_RD+
 Text GLabel 9100 7800 0    50   Input ~ 0
 EXT_R_VCC
@@ -250,7 +246,7 @@ Wire Wire Line
 	9100 8300 9300 8300
 Text GLabel 9100 8200 0    50   Input ~ 0
 GPIO_RB
-Text GLabel 12450 7850 2    50   Input ~ 0
+Text GLabel 11350 7850 0    50   Input ~ 0
 USB_RD-
 $Comp
 L power:PWR_FLAG #FLG?
@@ -589,86 +585,66 @@ Wire Wire Line
 Connection ~ 7150 2200
 Wire Wire Line
 	7150 2200 7200 2200
-Text GLabel 6100 7700 1    50   Input ~ 0
-COL_R5
-Connection ~ 4100 6000
-Wire Wire Line
-	4100 6000 5500 6000
-Text GLabel 6100 5350 1    50   Input ~ 0
+Text GLabel 2100 7700 1    50   Input ~ 0
 COL_R5
 Text GLabel 4900 5350 1    50   Input ~ 0
+COL_R5
+Text GLabel 2100 9600 1    50   Input ~ 0
 COL_R4
-Connection ~ 2700 6000
-Wire Wire Line
-	2700 6000 4100 6000
-Text GLabel 4700 5350 1    50   Input ~ 0
+Text GLabel 3300 6500 1    50   Input ~ 0
 COL_R0
-Wire Wire Line
-	1900 6000 2700 6000
 Text GLabel 1900 6000 0    50   Input ~ 0
 ROW_R0
 Wire Wire Line
-	2900 9900 2900 10150
+	4300 6850 4300 7100
 Wire Wire Line
-	2500 9900 2500 10150
-Text GLabel 4900 7700 1    50   Input ~ 0
+	3900 6850 3900 7100
+Text GLabel 3300 7700 1    50   Input ~ 0
 COL_R1
 Text GLabel 1900 7200 0    50   Input ~ 0
 ROW_R1
-Text GLabel 3300 6500 1    50   Input ~ 0
-COL_R5
 Wire Wire Line
-	1900 7200 2700 7200
+	2500 5650 2500 5900
 Wire Wire Line
-	2500 6850 2500 7100
+	2100 5650 2100 5350
 Wire Wire Line
-	2100 6850 2100 6500
+	2900 5900 2900 5650
 Wire Wire Line
-	2900 7100 2900 6850
-Wire Wire Line
-	3300 6850 3300 6500
-Text GLabel 3500 6500 1    50   Input ~ 0
-COL_R1
+	3300 5650 3300 5350
 Text GLabel 4700 6500 1    50   Input ~ 0
+COL_R1
+Text GLabel 3500 7700 1    50   Input ~ 0
 COL_R4
 Wire Wire Line
-	3500 6500 3500 6850
-Wire Wire Line
-	3900 6850 3900 7100
-Wire Wire Line
-	4300 7100 4300 6850
-Wire Wire Line
-	4700 6850 4700 6500
-Wire Wire Line
-	2700 7200 4100 7200
-Connection ~ 2700 7200
-Wire Wire Line
-	5300 6850 5300 7100
-Connection ~ 4100 7200
-Wire Wire Line
-	4700 9900 4700 9550
-Wire Wire Line
-	4300 10150 4300 9900
+	3500 9600 3500 9900
 Wire Wire Line
 	3900 9900 3900 10150
 Wire Wire Line
-	3500 9550 3500 9900
+	4300 10150 4300 9900
 Wire Wire Line
-	5500 7200 4100 7200
+	4700 9900 4700 9600
+Wire Wire Line
+	5300 6850 5300 7100
+Wire Wire Line
+	3300 6850 3300 6500
+Wire Wire Line
+	2900 7100 2900 6850
+Wire Wire Line
+	2500 6850 2500 7100
+Wire Wire Line
+	2100 6500 2100 6850
 Wire Wire Line
 	6100 6850 6100 6500
 Wire Wire Line
 	5700 6850 5700 7100
-Text GLabel 6100 6500 1    50   Input ~ 0
+Text GLabel 4900 6500 1    50   Input ~ 0
 COL_R3
 Text GLabel 1900 9000 0    50   Input ~ 0
 ROW_R2
-Text GLabel 2100 7700 1    50   Input ~ 0
+Text GLabel 3500 9600 1    50   Input ~ 0
 COL_R2
-Text GLabel 3300 7700 1    50   Input ~ 0
+Text GLabel 4900 7700 1    50   Input ~ 0
 COL_R3
-Wire Wire Line
-	1900 9000 2700 9000
 Wire Wire Line
 	2500 8900 2500 8650
 Wire Wire Line
@@ -695,17 +671,14 @@ Wire Wire Line
 	2500 7800 2500 8050
 Wire Wire Line
 	2300 8000 2300 8050
-Text GLabel 3500 7700 1    50   Input ~ 0
+Text GLabel 3500 5350 1    50   Input ~ 0
 COL_R0
-Text GLabel 4700 7700 1    50   Input ~ 0
+Text GLabel 6100 5350 1    50   Input ~ 0
 COL_R4
 Wire Wire Line
 	3500 7700 3500 8650
 Wire Wire Line
 	3900 8650 3900 8900
-Wire Wire Line
-	2700 9000 4100 9000
-Connection ~ 2700 9000
 Wire Wire Line
 	4300 8900 4300 8650
 Wire Wire Line
@@ -714,9 +687,6 @@ Wire Wire Line
 	4900 7700 4900 8650
 Wire Wire Line
 	5300 8650 5300 8900
-Wire Wire Line
-	5500 9000 4100 9000
-Connection ~ 4100 9000
 Wire Wire Line
 	5700 8900 5700 8650
 Wire Wire Line
@@ -738,60 +708,55 @@ Wire Wire Line
 Wire Wire Line
 	5900 8000 5900 8050
 Connection ~ 2300 8000
-Text GLabel 4700 9550 1    50   Input ~ 0
+Text GLabel 3300 5350 1    50   Input ~ 0
 COL_R2
 Wire Wire Line
 	4900 6500 4900 6850
-Text GLabel 4900 6500 1    50   Input ~ 0
+Text GLabel 6100 7700 1    50   Input ~ 0
 COL_R2
-Text GLabel 3500 9550 1    50   Input ~ 0
+Text GLabel 4700 9600 1    50   Input ~ 0
 COL_R3
-Text GLabel 3300 9550 1    50   Input ~ 0
+Text GLabel 3500 6500 1    50   Input ~ 0
 COL_R4
-Text GLabel 2100 9550 1    50   Input ~ 0
+Text GLabel 2100 6500 1    50   Input ~ 0
 COL_R5
 Text GLabel 1900 10250 0    50   Input ~ 0
 ROW_R3
 Wire Wire Line
-	1900 10250 2700 10250
+	4700 6500 4700 6850
 Wire Wire Line
-	2700 10250 4100 10250
-Connection ~ 2700 10250
-Wire Wire Line
-	3300 9550 3300 9900
-Wire Wire Line
-	2100 9550 2100 9900
-Text GLabel 3500 5350 1    50   Input ~ 0
+	3500 6500 3500 6850
+Text GLabel 4700 5350 1    50   Input ~ 0
 COL_R3
-Text GLabel 3300 5350 1    50   Input ~ 0
-COL_R1
 Text GLabel 2100 5350 1    50   Input ~ 0
+COL_R1
+Text GLabel 6100 6500 1    50   Input ~ 0
 COL_R2
-Wire Wire Line
-	3900 5650 3900 5900
-Wire Wire Line
-	3500 5350 3500 5650
-Wire Wire Line
-	4300 5900 4300 5650
-Wire Wire Line
-	4700 5650 4700 5350
 Wire Wire Line
 	5300 5650 5300 5900
 Wire Wire Line
 	4900 5350 4900 5650
 Wire Wire Line
-	5700 5650 5700 5900
+	5700 5900 5700 5650
 Wire Wire Line
-	6100 5350 6100 5650
+	6100 5650 6100 5350
 Wire Wire Line
-	2900 5650 2900 5900
+	3900 5650 3900 5900
 Wire Wire Line
-	3300 5350 3300 5650
+	3500 5350 3500 5650
 Wire Wire Line
-	2500 5650 2500 5900
+	4300 5650 4300 5900
 Wire Wire Line
-	2100 5350 2100 5650
-Text GLabel 2100 6500 1    50   Input ~ 0
+	4700 5350 4700 5650
+Wire Wire Line
+	2900 9900 2900 10150
+Wire Wire Line
+	3300 9600 3300 9900
+Wire Wire Line
+	2500 9900 2500 10150
+Wire Wire Line
+	2100 9600 2100 9900
+Text GLabel 4700 7700 1    50   Input ~ 0
 COL_R0
 $Comp
 L tornblue-rescue:nRF52840_holyiot_18010-tornblue-tornblue-rescue U?
@@ -1368,38 +1333,24 @@ $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 61BDD092
-P 2300 9900
+P 3100 5650
 AR Path="/61BDD092" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD092" Ref="SW27"  Part="1" 
-F 0 "SW27" H 2300 10185 50  0000 C CNN
-F 1 "SW_Push" H 2300 10094 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 2300 10100 50  0001 C CNN
-F 3 "~" H 2300 10100 50  0001 C CNN
-F 4 "-" H 2300 9900 50  0001 C CNN "LCSC"
-	1    2300 9900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD099
-P 3100 9900
-AR Path="/61BDD099" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD099" Ref="SW32"  Part="1" 
-F 0 "SW32" H 3100 10185 50  0000 C CNN
-F 1 "SW_Push" H 3100 10094 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3100 10100 50  0001 C CNN
-F 3 "~" H 3100 10100 50  0001 C CNN
-F 4 "-" H 3100 9900 50  0001 C CNN "LCSC"
-	1    3100 9900
+F 0 "SW27" H 3100 5935 50  0000 C CNN
+F 1 "SW_Push" H 3100 5844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3100 5850 50  0001 C CNN
+F 3 "~" H 3100 5850 50  0001 C CNN
+F 4 "-" H 3100 5650 50  0001 C CNN "LCSC"
+	1    3100 5650
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW?
-U 1 1 61BDD0A0
+U 1 1 61BDD099
 P 4500 6850
-AR Path="/61BDD0A0" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0A0" Ref="SW38"  Part="1" 
-F 0 "SW38" H 4500 7135 50  0000 C CNN
+AR Path="/61BDD099" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD099" Ref="SW32"  Part="1" 
+F 0 "SW32" H 4500 7135 50  0000 C CNN
 F 1 "SW_Push" H 4500 7044 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 4500 7050 50  0001 C CNN
 F 3 "~" H 4500 7050 50  0001 C CNN
@@ -1409,123 +1360,11 @@ F 4 "-" H 4500 6850 50  0001 C CNN "LCSC"
 $EndComp
 $Comp
 L Switch:SW_Push SW?
-U 1 1 61BDD0A7
-P 3100 6850
-AR Path="/61BDD0A7" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0A7" Ref="SW30"  Part="1" 
-F 0 "SW30" H 3100 7135 50  0000 C CNN
-F 1 "SW_Push" H 3100 7044 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3100 7050 50  0001 C CNN
-F 3 "~" H 3100 7050 50  0001 C CNN
-F 4 "-" H 3100 6850 50  0001 C CNN "LCSC"
-	1    3100 6850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:Rotary_Encoder_Switch SW?
-U 1 1 61BDD0AE
-P 5800 8350
-AR Path="/61BDD0AE" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0AE" Ref="SW46"  Part="1" 
-F 0 "SW46" V 5754 8580 50  0000 L CNN
-F 1 "EC11" V 5845 8580 50  0000 L CNN
-F 2 "tornblue:MX_PG1350_EVQWGD001_UD_optional" H 5650 8510 50  0001 C CNN
-F 3 "~" H 5800 8610 50  0001 C CNN
-F 4 "-" H 5800 8350 50  0001 C CNN "LCSC"
-	1    5800 8350
-	0    -1   1    0   
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD0B5
-P 4100 7100
-AR Path="/61BDD0B5" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD0B5" Ref="D30"  Part="1" 
-F 0 "D30" H 4100 7315 50  0000 C CNN
-F 1 "BAV70_Small" H 4100 7224 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 7100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 7100 50  0001 C CNN
-F 4 "C68978" H 4100 7100 50  0001 C CNN "LCSC"
-	1    4100 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD0BC
-P 4100 8900
-AR Path="/61BDD0BC" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD0BC" Ref="D31"  Part="1" 
-F 0 "D31" H 4100 9115 50  0000 C CNN
-F 1 "BAV70_Small" H 4100 9024 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 8900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 8900 50  0001 C CNN
-F 4 "C68978" H 4100 8900 50  0001 C CNN "LCSC"
-	1    4100 8900
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD0C3
-P 5500 8900
-AR Path="/61BDD0C3" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD0C3" Ref="D35"  Part="1" 
-F 0 "D35" H 5500 9115 50  0000 C CNN
-F 1 "BAV70_Small" H 5500 9024 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 8900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 5500 8900 50  0001 C CNN
-F 4 "C68978" H 5500 8900 50  0001 C CNN "LCSC"
-	1    5500 8900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Rotary_Encoder_Switch SW?
-U 1 1 61BDD0CA
-P 2400 8350
-AR Path="/61BDD0CA" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0CA" Ref="SW43"  Part="1" 
-F 0 "SW43" V 2350 7800 50  0000 L CNN
-F 1 "EC11" V 2450 7800 50  0000 L CNN
-F 2 "tornblue:MX_PG1350_EVQWGD001_UD_optional" H 2250 8510 50  0001 C CNN
-F 3 "~" H 2400 8610 50  0001 C CNN
-F 4 "-" H 2400 8350 50  0001 C CNN "LCSC"
-	1    2400 8350
-	0    1    1    0   
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD0D1
-P 5100 6850
-AR Path="/61BDD0D1" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0D1" Ref="SW42"  Part="1" 
-F 0 "SW42" H 5100 7135 50  0000 C CNN
-F 1 "SW_Push" H 5100 7044 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 5100 7050 50  0001 C CNN
-F 3 "~" H 5100 7050 50  0001 C CNN
-F 4 "-" H 5100 6850 50  0001 C CNN "LCSC"
-	1    5100 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD0D8
-P 2700 7100
-AR Path="/61BDD0D8" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD0D8" Ref="D20"  Part="1" 
-F 0 "D20" H 2700 7315 50  0000 C CNN
-F 1 "BAV70_Small" H 2700 7224 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 7100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 7100 50  0001 C CNN
-F 4 "C68978" H 2700 7100 50  0001 C CNN "LCSC"
-	1    2700 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD0DF
+U 1 1 61BDD0A0
 P 3100 8650
-AR Path="/61BDD0DF" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0DF" Ref="SW31"  Part="1" 
-F 0 "SW31" H 3100 8935 50  0000 C CNN
+AR Path="/61BDD0A0" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0A0" Ref="SW38"  Part="1" 
+F 0 "SW38" H 3100 8935 50  0000 C CNN
 F 1 "SW_Push" H 3100 8844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3100 8850 50  0001 C CNN
 F 3 "~" H 3100 8850 50  0001 C CNN
@@ -1535,95 +1374,67 @@ F 4 "-" H 3100 8650 50  0001 C CNN "LCSC"
 $EndComp
 $Comp
 L Switch:SW_Push SW?
-U 1 1 61BDD0E6
-P 5100 8650
-AR Path="/61BDD0E6" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0E6" Ref="SW28"  Part="1" 
-F 0 "SW28" H 5100 8935 50  0000 C CNN
-F 1 "SW_Push" H 5100 8844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 5100 8850 50  0001 C CNN
-F 3 "~" H 5100 8850 50  0001 C CNN
-F 4 "-" H 5100 8650 50  0001 C CNN "LCSC"
-	1    5100 8650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD0ED
-P 3700 6850
-AR Path="/61BDD0ED" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0ED" Ref="SW34"  Part="1" 
-F 0 "SW34" H 3700 7135 50  0000 C CNN
-F 1 "SW_Push" H 3700 7044 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3700 7050 50  0001 C CNN
-F 3 "~" H 3700 7050 50  0001 C CNN
-F 4 "-" H 3700 6850 50  0001 C CNN "LCSC"
-	1    3700 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD0F4
-P 2300 6850
-AR Path="/61BDD0F4" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0F4" Ref="SW26"  Part="1" 
-F 0 "SW26" H 2300 7135 50  0000 C CNN
-F 1 "SW_Push" H 2300 7044 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 2300 7050 50  0001 C CNN
-F 3 "~" H 2300 7050 50  0001 C CNN
-F 4 "-" H 2300 6850 50  0001 C CNN "LCSC"
-	1    2300 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD0FB
-P 3700 8650
-AR Path="/61BDD0FB" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD0FB" Ref="SW35"  Part="1" 
-F 0 "SW35" H 3700 8935 50  0000 C CNN
-F 1 "SW_Push" H 3700 8844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3700 8850 50  0001 C CNN
-F 3 "~" H 3700 8850 50  0001 C CNN
-F 4 "-" H 3700 8650 50  0001 C CNN "LCSC"
-	1    3700 8650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD102
-P 4500 8650
-AR Path="/61BDD102" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD102" Ref="SW39"  Part="1" 
-F 0 "SW39" H 4500 8935 50  0000 C CNN
-F 1 "SW_Push" H 4500 8844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 4500 8850 50  0001 C CNN
-F 3 "~" H 4500 8850 50  0001 C CNN
-F 4 "-" H 4500 8650 50  0001 C CNN "LCSC"
-	1    4500 8650
+U 1 1 61BDD0A7
+P 3100 9900
+AR Path="/61BDD0A7" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0A7" Ref="SW30"  Part="1" 
+F 0 "SW30" H 3100 10185 50  0000 C CNN
+F 1 "SW_Push" H 3100 10094 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3100 10100 50  0001 C CNN
+F 3 "~" H 3100 10100 50  0001 C CNN
+F 4 "-" H 3100 9900 50  0001 C CNN "LCSC"
+	1    3100 9900
 	-1   0    0    -1  
 $EndComp
 $Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 61BDD0AE
+P 2400 8350
+AR Path="/61BDD0AE" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0AE" Ref="SW46"  Part="1" 
+F 0 "SW46" V 2354 8580 50  0000 L CNN
+F 1 "EC11" V 2445 8580 50  0000 L CNN
+F 2 "tornblue:MX_PG1350_EVQWGD001_UD_optional" H 2250 8510 50  0001 C CNN
+F 3 "~" H 2400 8610 50  0001 C CNN
+F 4 "-" H 2400 8350 50  0001 C CNN "LCSC"
+	1    2400 8350
+	0    -1   1    0   
+$EndComp
+$Comp
 L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD109
-P 2700 10150
-AR Path="/61BDD109" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD109" Ref="D22"  Part="1" 
-F 0 "D22" H 2700 10365 50  0000 C CNN
-F 1 "BAV70_Small" H 2700 10274 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 10150 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 10150 50  0001 C CNN
-F 4 "C68978" H 2700 10150 50  0001 C CNN "LCSC"
-	1    2700 10150
+U 1 1 61BDD0B5
+P 5500 7100
+AR Path="/61BDD0B5" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD0B5" Ref="D30"  Part="1" 
+F 0 "D30" H 5500 7315 50  0000 C CNN
+F 1 "BAV70_Small" H 5500 7224 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 7100 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 5500 7100 50  0001 C CNN
+F 4 "C68978" H 5500 7100 50  0001 C CNN "LCSC"
+	1    5500 7100
 	1    0    0    -1  
 $EndComp
 $Comp
 L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD110
+U 1 1 61BDD0BC
+P 4100 10150
+AR Path="/61BDD0BC" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD0BC" Ref="D31"  Part="1" 
+F 0 "D31" H 4100 10365 50  0000 C CNN
+F 1 "BAV70_Small" H 4100 10274 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 10150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 10150 50  0001 C CNN
+F 4 "C68978" H 4100 10150 50  0001 C CNN "LCSC"
+	1    4100 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD0C3
 P 2700 5900
-AR Path="/61BDD110" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD110" Ref="D19"  Part="1" 
-F 0 "D19" H 2700 6115 50  0000 C CNN
+AR Path="/61BDD0C3" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD0C3" Ref="D35"  Part="1" 
+F 0 "D35" H 2700 6115 50  0000 C CNN
 F 1 "BAV70_Small" H 2700 6024 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 5900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 5900 50  0001 C CNN
@@ -1632,17 +1443,171 @@ F 4 "C68978" H 2700 5900 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 61BDD0CA
+P 5800 8350
+AR Path="/61BDD0CA" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0CA" Ref="SW43"  Part="1" 
+F 0 "SW43" V 5750 7800 50  0000 L CNN
+F 1 "EC11" V 5850 7800 50  0000 L CNN
+F 2 "tornblue:MX_PG1350_EVQWGD001_UD_optional" H 5650 8510 50  0001 C CNN
+F 3 "~" H 5800 8610 50  0001 C CNN
+F 4 "-" H 5800 8350 50  0001 C CNN "LCSC"
+	1    5800 8350
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0D1
+P 2300 6850
+AR Path="/61BDD0D1" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0D1" Ref="SW42"  Part="1" 
+F 0 "SW42" H 2300 7135 50  0000 C CNN
+F 1 "SW_Push" H 2300 7044 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 2300 7050 50  0001 C CNN
+F 3 "~" H 2300 7050 50  0001 C CNN
+F 4 "-" H 2300 6850 50  0001 C CNN "LCSC"
+	1    2300 6850
+	1    0    0    -1  
+$EndComp
+$Comp
 L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD117
+U 1 1 61BDD0D8
+P 4100 8900
+AR Path="/61BDD0D8" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD0D8" Ref="D20"  Part="1" 
+F 0 "D20" H 4100 9115 50  0000 C CNN
+F 1 "BAV70_Small" H 4100 9024 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 8900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 8900 50  0001 C CNN
+F 4 "C68978" H 4100 8900 50  0001 C CNN "LCSC"
+	1    4100 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0DF
+P 3100 6850
+AR Path="/61BDD0DF" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0DF" Ref="SW31"  Part="1" 
+F 0 "SW31" H 3100 7135 50  0000 C CNN
+F 1 "SW_Push" H 3100 7044 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3100 7050 50  0001 C CNN
+F 3 "~" H 3100 7050 50  0001 C CNN
+F 4 "-" H 3100 6850 50  0001 C CNN "LCSC"
+	1    3100 6850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0E6
+P 4500 5650
+AR Path="/61BDD0E6" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0E6" Ref="SW28"  Part="1" 
+F 0 "SW28" H 4500 5935 50  0000 C CNN
+F 1 "SW_Push" H 4500 5844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 4500 5850 50  0001 C CNN
+F 3 "~" H 4500 5850 50  0001 C CNN
+F 4 "-" H 4500 5650 50  0001 C CNN "LCSC"
+	1    4500 5650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0ED
+P 4500 9900
+AR Path="/61BDD0ED" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0ED" Ref="SW34"  Part="1" 
+F 0 "SW34" H 4500 10185 50  0000 C CNN
+F 1 "SW_Push" H 4500 10094 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 4500 10100 50  0001 C CNN
+F 3 "~" H 4500 10100 50  0001 C CNN
+F 4 "-" H 4500 9900 50  0001 C CNN "LCSC"
+	1    4500 9900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0F4
+P 2300 5650
+AR Path="/61BDD0F4" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0F4" Ref="SW26"  Part="1" 
+F 0 "SW26" H 2300 5935 50  0000 C CNN
+F 1 "SW_Push" H 2300 5844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 2300 5850 50  0001 C CNN
+F 3 "~" H 2300 5850 50  0001 C CNN
+F 4 "-" H 2300 5650 50  0001 C CNN "LCSC"
+	1    2300 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD0FB
+P 2300 9900
+AR Path="/61BDD0FB" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD0FB" Ref="SW35"  Part="1" 
+F 0 "SW35" H 2300 10185 50  0000 C CNN
+F 1 "SW_Push" H 2300 10094 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 2300 10100 50  0001 C CNN
+F 3 "~" H 2300 10100 50  0001 C CNN
+F 4 "-" H 2300 9900 50  0001 C CNN "LCSC"
+	1    2300 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD102
+P 3700 9900
+AR Path="/61BDD102" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD102" Ref="SW39"  Part="1" 
+F 0 "SW39" H 3700 10185 50  0000 C CNN
+F 1 "SW_Push" H 3700 10094 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3700 10100 50  0001 C CNN
+F 3 "~" H 3700 10100 50  0001 C CNN
+F 4 "-" H 3700 9900 50  0001 C CNN "LCSC"
+	1    3700 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD109
 P 5500 5900
-AR Path="/61BDD117" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD117" Ref="D33"  Part="1" 
-F 0 "D33" H 5500 6115 50  0000 C CNN
+AR Path="/61BDD109" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD109" Ref="D22"  Part="1" 
+F 0 "D22" H 5500 6115 50  0000 C CNN
 F 1 "BAV70_Small" H 5500 6024 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 5900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 5500 5900 50  0001 C CNN
 F 4 "C68978" H 5500 5900 50  0001 C CNN "LCSC"
 	1    5500 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD110
+P 2700 8900
+AR Path="/61BDD110" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD110" Ref="D19"  Part="1" 
+F 0 "D19" H 2700 9115 50  0000 C CNN
+F 1 "BAV70_Small" H 2700 9024 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 8900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 8900 50  0001 C CNN
+F 4 "C68978" H 2700 8900 50  0001 C CNN "LCSC"
+	1    2700 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD117
+P 5500 8900
+AR Path="/61BDD117" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD117" Ref="D33"  Part="1" 
+F 0 "D33" H 5500 9115 50  0000 C CNN
+F 1 "BAV70_Small" H 5500 9024 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 8900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 5500 8900 50  0001 C CNN
+F 4 "C68978" H 5500 8900 50  0001 C CNN "LCSC"
+	1    5500 8900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1662,24 +1627,94 @@ $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 61BDD125
-P 4500 9900
+P 5100 6850
 AR Path="/61BDD125" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD125" Ref="SW40"  Part="1" 
-F 0 "SW40" H 4500 10185 50  0000 C CNN
-F 1 "SW_Push" H 4500 10094 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 4500 10100 50  0001 C CNN
-F 3 "~" H 4500 10100 50  0001 C CNN
-F 4 "-" H 4500 9900 50  0001 C CNN "LCSC"
-	1    4500 9900
-	-1   0    0    -1  
+F 0 "SW40" H 5100 7135 50  0000 C CNN
+F 1 "SW_Push" H 5100 7044 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 5100 7050 50  0001 C CNN
+F 3 "~" H 5100 7050 50  0001 C CNN
+F 4 "-" H 5100 6850 50  0001 C CNN "LCSC"
+	1    5100 6850
+	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 61BDD12C
-P 5900 6850
+P 3700 8650
 AR Path="/61BDD12C" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD12C" Ref="SW45"  Part="1" 
-F 0 "SW45" H 5900 7135 50  0000 C CNN
+F 0 "SW45" H 3700 8935 50  0000 C CNN
+F 1 "SW_Push" H 3700 8844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3700 8850 50  0001 C CNN
+F 3 "~" H 3700 8850 50  0001 C CNN
+F 4 "-" H 3700 8650 50  0001 C CNN "LCSC"
+	1    3700 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD133
+P 5100 5650
+AR Path="/61BDD133" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD133" Ref="SW36"  Part="1" 
+F 0 "SW36" H 5100 5935 50  0000 C CNN
+F 1 "SW_Push" H 5100 5844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 5100 5850 50  0001 C CNN
+F 3 "~" H 5100 5850 50  0001 C CNN
+F 4 "-" H 5100 5650 50  0001 C CNN "LCSC"
+	1    5100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD13A
+P 2700 7100
+AR Path="/61BDD13A" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD13A" Ref="D34"  Part="1" 
+F 0 "D34" H 2700 7315 50  0000 C CNN
+F 1 "BAV70_Small" H 2700 7224 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 7100 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 7100 50  0001 C CNN
+F 4 "C68978" H 2700 7100 50  0001 C CNN "LCSC"
+	1    2700 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD141
+P 2700 10150
+AR Path="/61BDD141" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD141" Ref="D21"  Part="1" 
+F 0 "D21" H 2700 10365 50  0000 C CNN
+F 1 "BAV70_Small" H 2700 10274 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 10150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 10150 50  0001 C CNN
+F 4 "C68978" H 2700 10150 50  0001 C CNN "LCSC"
+	1    2700 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad-keyboard-parts:BAV70_Small D?
+U 1 1 61BDD148
+P 4100 7100
+AR Path="/61BDD148" Ref="D?"  Part="1" 
+AR Path="/61B675D2/61BDD148" Ref="D32"  Part="1" 
+F 0 "D32" H 4100 7315 50  0000 C CNN
+F 1 "BAV70_Small" H 4100 7224 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 7100 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 7100 50  0001 C CNN
+F 4 "C68978" H 4100 7100 50  0001 C CNN "LCSC"
+	1    4100 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD14F
+P 5900 6850
+AR Path="/61BDD14F" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD14F" Ref="SW33"  Part="1" 
+F 0 "SW33" H 5900 7135 50  0000 C CNN
 F 1 "SW_Push" H 5900 7044 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5900 7050 50  0001 C CNN
 F 3 "~" H 5900 7050 50  0001 C CNN
@@ -1689,109 +1724,53 @@ F 4 "-" H 5900 6850 50  0001 C CNN "LCSC"
 $EndComp
 $Comp
 L Switch:SW_Push SW?
-U 1 1 61BDD133
-P 3700 9900
-AR Path="/61BDD133" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD133" Ref="SW36"  Part="1" 
-F 0 "SW36" H 3700 10185 50  0000 C CNN
-F 1 "SW_Push" H 3700 10094 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3700 10100 50  0001 C CNN
-F 3 "~" H 3700 10100 50  0001 C CNN
-F 4 "-" H 3700 9900 50  0001 C CNN "LCSC"
-	1    3700 9900
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD13A
-P 5500 7100
-AR Path="/61BDD13A" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD13A" Ref="D34"  Part="1" 
-F 0 "D34" H 5500 7315 50  0000 C CNN
-F 1 "BAV70_Small" H 5500 7224 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 7100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 5500 7100 50  0001 C CNN
-F 4 "C68978" H 5500 7100 50  0001 C CNN "LCSC"
-	1    5500 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD141
-P 2700 8900
-AR Path="/61BDD141" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD141" Ref="D21"  Part="1" 
-F 0 "D21" H 2700 9115 50  0000 C CNN
-F 1 "BAV70_Small" H 2700 9024 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2800 8900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 2700 8900 50  0001 C CNN
-F 4 "C68978" H 2700 8900 50  0001 C CNN "LCSC"
-	1    2700 8900
-	1    0    0    -1  
-$EndComp
-$Comp
-L kicad-keyboard-parts:BAV70_Small D?
-U 1 1 61BDD148
-P 4100 10150
-AR Path="/61BDD148" Ref="D?"  Part="1" 
-AR Path="/61B675D2/61BDD148" Ref="D32"  Part="1" 
-F 0 "D32" H 4100 10365 50  0000 C CNN
-F 1 "BAV70_Small" H 4100 10274 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 10150 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4100 10150 50  0001 C CNN
-F 4 "C68978" H 4100 10150 50  0001 C CNN "LCSC"
-	1    4100 10150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 61BDD14F
-P 3700 5650
-AR Path="/61BDD14F" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD14F" Ref="SW33"  Part="1" 
-F 0 "SW33" H 3700 5935 50  0000 C CNN
-F 1 "SW_Push" H 3700 5844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3700 5850 50  0001 C CNN
-F 3 "~" H 3700 5850 50  0001 C CNN
-F 4 "-" H 3700 5650 50  0001 C CNN "LCSC"
-	1    3700 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
 U 1 1 61BDD156
-P 4500 5650
+P 4500 8650
 AR Path="/61BDD156" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD156" Ref="SW37"  Part="1" 
-F 0 "SW37" H 4500 5935 50  0000 C CNN
-F 1 "SW_Push" H 4500 5844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 4500 5850 50  0001 C CNN
-F 3 "~" H 4500 5850 50  0001 C CNN
-F 4 "-" H 4500 5650 50  0001 C CNN "LCSC"
-	1    4500 5650
+F 0 "SW37" H 4500 8935 50  0000 C CNN
+F 1 "SW_Push" H 4500 8844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 4500 8850 50  0001 C CNN
+F 3 "~" H 4500 8850 50  0001 C CNN
+F 4 "-" H 4500 8650 50  0001 C CNN "LCSC"
+	1    4500 8650
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 61BDD15D
-P 5100 5650
+P 3700 6850
 AR Path="/61BDD15D" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD15D" Ref="SW41"  Part="1" 
-F 0 "SW41" H 5100 5935 50  0000 C CNN
-F 1 "SW_Push" H 5100 5844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 5100 5850 50  0001 C CNN
-F 3 "~" H 5100 5850 50  0001 C CNN
-F 4 "-" H 5100 5650 50  0001 C CNN "LCSC"
-	1    5100 5650
+F 0 "SW41" H 3700 7135 50  0000 C CNN
+F 1 "SW_Push" H 3700 7044 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3700 7050 50  0001 C CNN
+F 3 "~" H 3700 7050 50  0001 C CNN
+F 4 "-" H 3700 6850 50  0001 C CNN "LCSC"
+	1    3700 6850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 61BDD164
-P 5900 5650
+P 5100 8650
 AR Path="/61BDD164" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD164" Ref="SW44"  Part="1" 
-F 0 "SW44" H 5900 5935 50  0000 C CNN
+F 0 "SW44" H 5100 8935 50  0000 C CNN
+F 1 "SW_Push" H 5100 8844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 5100 8850 50  0001 C CNN
+F 3 "~" H 5100 8850 50  0001 C CNN
+F 4 "-" H 5100 8650 50  0001 C CNN "LCSC"
+	1    5100 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61BDD16B
+P 5900 5650
+AR Path="/61BDD16B" Ref="SW?"  Part="1" 
+AR Path="/61B675D2/61BDD16B" Ref="SW29"  Part="1" 
+F 0 "SW29" H 5900 5935 50  0000 C CNN
 F 1 "SW_Push" H 5900 5844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5900 5850 50  0001 C CNN
 F 3 "~" H 5900 5850 50  0001 C CNN
@@ -1801,30 +1780,16 @@ F 4 "-" H 5900 5650 50  0001 C CNN "LCSC"
 $EndComp
 $Comp
 L Switch:SW_Push SW?
-U 1 1 61BDD16B
-P 3100 5650
-AR Path="/61BDD16B" Ref="SW?"  Part="1" 
-AR Path="/61B675D2/61BDD16B" Ref="SW29"  Part="1" 
-F 0 "SW29" H 3100 5935 50  0000 C CNN
-F 1 "SW_Push" H 3100 5844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 3100 5850 50  0001 C CNN
-F 3 "~" H 3100 5850 50  0001 C CNN
-F 4 "-" H 3100 5650 50  0001 C CNN "LCSC"
-	1    3100 5650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
 U 1 1 61BDD172
-P 2300 5650
+P 3700 5650
 AR Path="/61BDD172" Ref="SW?"  Part="1" 
 AR Path="/61B675D2/61BDD172" Ref="SW25"  Part="1" 
-F 0 "SW25" H 2300 5935 50  0000 C CNN
-F 1 "SW_Push" H 2300 5844 50  0000 C CNN
-F 2 "tornblue:MX_PG1350_optional" H 2300 5850 50  0001 C CNN
-F 3 "~" H 2300 5850 50  0001 C CNN
-F 4 "-" H 2300 5650 50  0001 C CNN "LCSC"
-	1    2300 5650
+F 0 "SW25" H 3700 5935 50  0000 C CNN
+F 1 "SW_Push" H 3700 5844 50  0000 C CNN
+F 2 "tornblue:MX_PG1350_optional" H 3700 5850 50  0001 C CNN
+F 3 "~" H 3700 5850 50  0001 C CNN
+F 4 "-" H 3700 5650 50  0001 C CNN "LCSC"
+	1    3700 5650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -4069,4 +4034,39 @@ F 3 "" H 1900 7900 50  0001 C CNN
 	1    1900 7900
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	12400 7650 12450 7650
+Wire Wire Line
+	11350 7850 11400 7850
+Wire Wire Line
+	1900 9000 2700 9000
+Connection ~ 4100 9000
+Wire Wire Line
+	4100 9000 5500 9000
+Connection ~ 2700 9000
+Wire Wire Line
+	2700 9000 4100 9000
+Wire Wire Line
+	1900 7200 2700 7200
+Wire Wire Line
+	1900 6000 2700 6000
+Connection ~ 4100 6000
+Wire Wire Line
+	4100 6000 5500 6000
+Connection ~ 2700 6000
+Wire Wire Line
+	2700 6000 4100 6000
+Text GLabel 3300 9600 1    50   Input ~ 0
+COL_R5
+Connection ~ 2700 7200
+Wire Wire Line
+	2700 7200 4100 7200
+Connection ~ 4100 7200
+Wire Wire Line
+	4100 7200 5500 7200
+Wire Wire Line
+	1900 10250 2700 10250
+Connection ~ 2700 10250
+Wire Wire Line
+	2700 10250 4100 10250
 $EndSCHEMATC
