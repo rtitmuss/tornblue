@@ -33,6 +33,13 @@ filters:
       - column: 'LCSC'
         regex: '^C\d+'
 
+  - name: only_elecrow
+    comment: 'Only parts with Mouser'
+    type: generic
+    include_only:
+      - column: 'Mouser'
+        regex: '^[^-]'
+
   - name: jlcpcb_fix_rotation
     comment: 'Adjust rotation for JLC'
     type: rot_footprint
@@ -51,6 +58,23 @@ outputs:
   - name: 'schematic'
     comment: 'Schematic PDF'
     type: pdf_sch_print
+
+  - name: "ibom"
+    comment: "Iteractive bom"
+    type: ibom
+
+  - name: "pcbdraw"
+    comment: "2D render top"
+    type: pcbdraw
+    options:
+      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+
+  - name: "pcbdraw"
+    comment: "2D render bottom"
+    type: pcbdraw
+    options:
+      bottom: true
+      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
 
   - name: jlcpcb_gerber
     comment: "Gerber files, JLCPCB"
@@ -155,20 +179,99 @@ outputs:
         - from_output: jlcpcb_drill
           dest: /
 
-  - name: "ibom"
-    comment: "Iteractive bom"
-    type: ibom
 
-  - name: "pcbdraw"
-    comment: "2D render top"
-    type: pcbdraw
+  - name: elecrow_gerbers
+    comment: Gerbers compatible with Elecrow
+    type: gerber
+    dir: elecrow/gerber
+    options: &gerber_options
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: true
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+      use_protel_extensions: true
+      create_gerber_job_file: false
+      output: "%f.%x"
+      gerber_precision: 4.6
+      use_gerber_x2_attributes: false
+      use_gerber_net_attributes: false
+      disable_aperture_macros: true
+      line_width: 0.1
+      uppercase_extensions: true
+      subtract_mask_from_silk: true
+      inner_extension_pattern: '.g%n'
+      edge_cut_extension: '.gml'
+    layers:
+      - copper
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - Edge.Cuts
+
+  - name: elecrow_drill
+    comment: Drill files compatible with Elecrow
+    type: excellon
+    dir: elecrow/gerber
     options:
-      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+      pth_and_npth_single_file: false
+      pth_id: ''
+      npth_id: '-NPTH'
+      output: "%f%i.TXT"
 
-  - name: "pcbdraw"
-    comment: "2D render bottom"
-    type: pcbdraw
+  - name: elecrow_bom
+    comment: 'BOM, JLCPCB'
+    type: bom
+    dir: elecrow
     options:
-      bottom: true
-      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+      format: CSV
+      exclude_filter: 'only_elecrow'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+      columns:
+        - field: Value
+          name: Comment
+        - field: References
+          name: Designator
+        - Footprint
+        - field: 'Mouser'
+          name: 'Mouser PN'
 
+  - name: elecrow_position
+    comment: 'Pick and place, JLCPCB'
+    type: position
+    dir: elecrow
+    options:
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: true
+      only_smd: true
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: elecrow
+    comment: ZIP file for Elecrow
+    type: compress
+    dir: elecrow
+    options:
+      files:
+        - from_output: elecrow_gerbers
+          dest: /
+        - from_output: elecrow_drill
+          dest: /

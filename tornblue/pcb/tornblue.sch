@@ -22,6 +22,7 @@ F 1 "MountingHole" H 11400 10355 50  0001 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 11300 10400 50  0001 C CNN
 F 3 "~" H 11300 10400 50  0001 C CNN
 F 4 "-" H 11300 10400 50  0001 C CNN "LCSC"
+F 5 "-" H 11300 10400 50  0001 C CNN "Mouser"
 	1    11300 10400
 	1    0    0    -1  
 $EndComp
@@ -34,6 +35,7 @@ F 1 "MountingHole" H 11400 10555 50  0001 L CNN
 F 2 "tornblue:MountingHole_3.2mm_M3_DIN965_Pad_Slot" H 11300 10600 50  0001 C CNN
 F 3 "~" H 11300 10600 50  0001 C CNN
 F 4 "-" H 11300 10600 50  0001 C CNN "LCSC"
+F 5 "-" H 11300 10600 50  0001 C CNN "Mouser"
 	1    11300 10600
 	1    0    0    -1  
 $EndComp
@@ -46,6 +48,7 @@ F 1 "MountingHole" H 11400 10755 50  0001 L CNN
 F 2 "tornblue:MountingHole_3.2mm_M3_DIN965_Pad_Slot" H 11300 10800 50  0001 C CNN
 F 3 "~" H 11300 10800 50  0001 C CNN
 F 4 "-" H 11300 10800 50  0001 C CNN "LCSC"
+F 5 "-" H 11300 10800 50  0001 C CNN "Mouser"
 	1    11300 10800
 	1    0    0    -1  
 $EndComp
@@ -58,6 +61,7 @@ F 1 "MountingHole" H 11050 10755 50  0001 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 10950 10800 50  0001 C CNN
 F 3 "~" H 10950 10800 50  0001 C CNN
 F 4 "-" H 10950 10800 50  0001 C CNN "LCSC"
+F 5 "-" H 10950 10800 50  0001 C CNN "Mouser"
 	1    10950 10800
 	1    0    0    -1  
 $EndComp
@@ -70,6 +74,7 @@ F 1 "MountingHole" H 11050 10555 50  0001 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 10950 10600 50  0001 C CNN
 F 3 "~" H 10950 10600 50  0001 C CNN
 F 4 "-" H 10950 10600 50  0001 C CNN "LCSC"
+F 5 "-" H 10950 10600 50  0001 C CNN "Mouser"
 	1    10950 10600
 	1    0    0    -1  
 $EndComp
@@ -82,6 +87,7 @@ F 1 "MountingHole" H 11050 10355 50  0001 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 10950 10400 50  0001 C CNN
 F 3 "~" H 10950 10400 50  0001 C CNN
 F 4 "-" H 10950 10400 50  0001 C CNN "LCSC"
+F 5 "-" H 10950 10400 50  0001 C CNN "Mouser"
 	1    10950 10400
 	1    0    0    -1  
 $EndComp
@@ -92,7 +98,9 @@ P 5250 2450
 F 0 "SW50" H 5250 2125 50  0000 C CNN
 F 1 "SW_SPST" H 5250 2216 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPDT_PCM12" H 5250 2450 50  0001 C CNN
-F 3 "~" H 5250 2450 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1912111437_C&K-PCM12SMTR_C221841.pdf" H 5250 2450 50  0001 C CNN
+F 4 "C221841" H 5250 2450 50  0001 C CNN "LCSC"
+F 5 "TODO" H 5250 2450 50  0001 C CNN "Mouser"
 	1    5250 2450
 	1    0    0    -1  
 $EndComp
@@ -105,6 +113,7 @@ F 1 "SW_Push" H 3150 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3150 5600 50  0001 C CNN
 F 3 "~" H 3150 5600 50  0001 C CNN
 F 4 "-" H 3150 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 3150 5400 50  0001 C CNN "Mouser"
 	1    3150 5400
 	1    0    0    -1  
 $EndComp
@@ -117,6 +126,7 @@ F 1 "SW_Push" H 3950 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3950 5600 50  0001 C CNN
 F 3 "~" H 3950 5600 50  0001 C CNN
 F 4 "-" H 3950 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 3950 5400 50  0001 C CNN "Mouser"
 	1    3950 5400
 	-1   0    0    -1  
 $EndComp
@@ -129,6 +139,7 @@ F 1 "SW_Push" H 6750 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 6750 5600 50  0001 C CNN
 F 3 "~" H 6750 5600 50  0001 C CNN
 F 4 "-" H 6750 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 6750 5400 50  0001 C CNN "Mouser"
 	1    6750 5400
 	-1   0    0    -1  
 $EndComp
@@ -141,6 +152,7 @@ F 1 "SW_Push" H 5950 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5950 5600 50  0001 C CNN
 F 3 "~" H 5950 5600 50  0001 C CNN
 F 4 "-" H 5950 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 5950 5400 50  0001 C CNN "Mouser"
 	1    5950 5400
 	1    0    0    -1  
 $EndComp
@@ -153,6 +165,7 @@ F 1 "SW_Push" H 5350 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5350 5600 50  0001 C CNN
 F 3 "~" H 5350 5600 50  0001 C CNN
 F 4 "-" H 5350 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 5350 5400 50  0001 C CNN "Mouser"
 	1    5350 5400
 	-1   0    0    -1  
 $EndComp
@@ -165,6 +178,7 @@ F 1 "SW_Push" H 4550 5594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 4550 5600 50  0001 C CNN
 F 3 "~" H 4550 5600 50  0001 C CNN
 F 4 "-" H 4550 5400 50  0001 C CNN "LCSC"
+F 5 "-" H 4550 5400 50  0001 C CNN "Mouser"
 	1    4550 5400
 	1    0    0    -1  
 $EndComp
@@ -177,6 +191,7 @@ F 1 "BAV70_Small" H 4950 10024 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 9900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4950 9900 50  0001 C CNN
 F 4 "C68978" H 4950 9900 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4950 9900 50  0001 C CNN "Mouser"
 	1    4950 9900
 	1    0    0    -1  
 $EndComp
@@ -189,6 +204,7 @@ F 1 "USB C - USB2.0" H 14007 8376 50  0000 C CNN
 F 2 "Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11" H 14050 7600 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/2103051833_Jing-Extension-of-the-Electronic-Co.-918-418K2023S40001_C167321.pdf" H 14050 7600 50  0001 C CNN
 F 4 "C167321" H 13900 7600 50  0001 C CNN "LCSC"
+F 5 "TODO" H 13900 7600 50  0001 C CNN "Mouser"
 	1    13900 7600
 	1    0    0    -1  
 $EndComp
@@ -201,6 +217,7 @@ F 1 "5.1k" V 14800 7250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 14900 7200 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809062031_UNI-ROYAL-Uniroyal-Elec-0805W8F5101T5E_C27834.pdf" H 14900 7200 50  0001 C CNN
 F 4 "C27834" H 14900 7200 50  0001 C CNN "LCSC"
+F 5 "TODO" H 14900 7200 50  0001 C CNN "Mouser"
 	1    14900 7200
 	0    1    1    0   
 $EndComp
@@ -213,6 +230,7 @@ F 1 "5.1k" V 15000 7350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 14900 7300 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809062031_UNI-ROYAL-Uniroyal-Elec-0805W8F5101T5E_C27834.pdf" H 14900 7300 50  0001 C CNN
 F 4 "C27834" H 14900 7300 50  0001 C CNN "LCSC"
+F 5 "TODO" H 14900 7300 50  0001 C CNN "Mouser"
 	1    14900 7300
 	0    1    1    0   
 $EndComp
@@ -225,6 +243,7 @@ F 1 "BAV70_Small" H 3550 8774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 8650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 3550 8650 50  0001 C CNN
 F 4 "C68978" H 3550 8650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3550 8650 50  0001 C CNN "Mouser"
 	1    3550 8650
 	1    0    0    -1  
 $EndComp
@@ -237,6 +256,7 @@ F 1 "BAV70_Small" H 6350 6974 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 6850 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 6350 6850 50  0001 C CNN
 F 4 "C68978" H 6350 6850 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6350 6850 50  0001 C CNN "Mouser"
 	1    6350 6850
 	1    0    0    -1  
 $EndComp
@@ -249,6 +269,7 @@ F 1 "SW_Push" H 4550 9844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 4550 9850 50  0001 C CNN
 F 3 "~" H 4550 9850 50  0001 C CNN
 F 4 "-" H 4550 9650 50  0001 C CNN "LCSC"
+F 5 "-" H 4550 9650 50  0001 C CNN "Mouser"
 	1    4550 9650
 	1    0    0    -1  
 $EndComp
@@ -261,6 +282,7 @@ F 1 "SW_Push" H 6750 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 6750 6800 50  0001 C CNN
 F 3 "~" H 6750 6800 50  0001 C CNN
 F 4 "-" H 6750 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 6750 6600 50  0001 C CNN "Mouser"
 	1    6750 6600
 	-1   0    0    -1  
 $EndComp
@@ -273,6 +295,7 @@ F 1 "SW_Push" H 5350 9844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5350 9850 50  0001 C CNN
 F 3 "~" H 5350 9850 50  0001 C CNN
 F 4 "-" H 5350 9650 50  0001 C CNN "LCSC"
+F 5 "-" H 5350 9650 50  0001 C CNN "Mouser"
 	1    5350 9650
 	-1   0    0    -1  
 $EndComp
@@ -285,6 +308,7 @@ F 1 "BAV70_Small" H 4950 5774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 5650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4950 5650 50  0001 C CNN
 F 4 "C68978" H 4950 5650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4950 5650 50  0001 C CNN "Mouser"
 	1    4950 5650
 	1    0    0    -1  
 $EndComp
@@ -297,6 +321,7 @@ F 1 "BAV70_Small" H 6350 5774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 5650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 6350 5650 50  0001 C CNN
 F 4 "C68978" H 6350 5650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6350 5650 50  0001 C CNN "Mouser"
 	1    6350 5650
 	1    0    0    -1  
 $EndComp
@@ -309,6 +334,7 @@ F 1 "BAV70_Small" H 3550 5774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 5650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 3550 5650 50  0001 C CNN
 F 4 "C68978" H 3550 5650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3550 5650 50  0001 C CNN "Mouser"
 	1    3550 5650
 	1    0    0    -1  
 $EndComp
@@ -321,6 +347,7 @@ F 1 "BAV70_Small" H 3550 10024 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 9900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 3550 9900 50  0001 C CNN
 F 4 "C68978" H 3550 9900 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3550 9900 50  0001 C CNN "Mouser"
 	1    3550 9900
 	1    0    0    -1  
 $EndComp
@@ -333,6 +360,7 @@ F 1 "SW_Push" H 5350 8594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5350 8600 50  0001 C CNN
 F 3 "~" H 5350 8600 50  0001 C CNN
 F 4 "-" H 5350 8400 50  0001 C CNN "LCSC"
+F 5 "-" H 5350 8400 50  0001 C CNN "Mouser"
 	1    5350 8400
 	-1   0    0    -1  
 $EndComp
@@ -345,6 +373,7 @@ F 1 "SW_Push" H 4550 8594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 4550 8600 50  0001 C CNN
 F 3 "~" H 4550 8600 50  0001 C CNN
 F 4 "-" H 4550 8400 50  0001 C CNN "LCSC"
+F 5 "-" H 4550 8400 50  0001 C CNN "Mouser"
 	1    4550 8400
 	1    0    0    -1  
 $EndComp
@@ -357,6 +386,7 @@ F 1 "SW_Push" H 3150 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3150 6800 50  0001 C CNN
 F 3 "~" H 3150 6800 50  0001 C CNN
 F 4 "-" H 3150 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 3150 6600 50  0001 C CNN "Mouser"
 	1    3150 6600
 	1    0    0    -1  
 $EndComp
@@ -369,6 +399,7 @@ F 1 "SW_Push" H 4550 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 4550 6800 50  0001 C CNN
 F 3 "~" H 4550 6800 50  0001 C CNN
 F 4 "-" H 4550 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 4550 6600 50  0001 C CNN "Mouser"
 	1    4550 6600
 	1    0    0    -1  
 $EndComp
@@ -381,6 +412,7 @@ F 1 "SW_Push" H 5950 8594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5950 8600 50  0001 C CNN
 F 3 "~" H 5950 8600 50  0001 C CNN
 F 4 "-" H 5950 8400 50  0001 C CNN "LCSC"
+F 5 "-" H 5950 8400 50  0001 C CNN "Mouser"
 	1    5950 8400
 	1    0    0    -1  
 $EndComp
@@ -393,6 +425,7 @@ F 1 "SW_Push" H 3950 8594 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3950 8600 50  0001 C CNN
 F 3 "~" H 3950 8600 50  0001 C CNN
 F 4 "-" H 3950 8400 50  0001 C CNN "LCSC"
+F 5 "-" H 3950 8400 50  0001 C CNN "Mouser"
 	1    3950 8400
 	-1   0    0    -1  
 $EndComp
@@ -405,6 +438,7 @@ F 1 "BAV70_Small" H 3550 6974 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 6850 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 3550 6850 50  0001 C CNN
 F 4 "C68978" H 3550 6850 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3550 6850 50  0001 C CNN "Mouser"
 	1    3550 6850
 	1    0    0    -1  
 $EndComp
@@ -417,6 +451,7 @@ F 1 "SW_Push" H 5950 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5950 6800 50  0001 C CNN
 F 3 "~" H 5950 6800 50  0001 C CNN
 F 4 "-" H 5950 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 5950 6600 50  0001 C CNN "Mouser"
 	1    5950 6600
 	1    0    0    -1  
 $EndComp
@@ -429,6 +464,7 @@ F 1 "EC11" V 3300 7550 50  0000 L CNN
 F 2 "tornblue:MX_PG1350_EVQWGD001_LR_optional" H 3100 8260 50  0001 C CNN
 F 3 "~" H 3250 8360 50  0001 C CNN
 F 4 "-" H 3250 8100 50  0001 C CNN "LCSC"
+F 5 "-" H 3250 8100 50  0001 C CNN "Mouser"
 	1    3250 8100
 	0    1    1    0   
 $EndComp
@@ -441,6 +477,7 @@ F 1 "BREAKOUT" H 9872 8523 50  0000 R CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical" H 9900 8550 50  0001 C CNN
 F 3 "~" H 9900 8550 50  0001 C CNN
 F 4 "-" H 9900 8550 50  0001 C CNN "LCSC"
+F 5 "-" H 9900 8550 50  0001 C CNN "Mouser"
 	1    9900 8550
 	-1   0    0    1   
 $EndComp
@@ -453,6 +490,7 @@ F 1 "SWD" H 14750 3000 50  0000 L CNN
 F 2 "tornblue:SOIC_clipProgSmall" H 14950 3000 50  0001 C CNN
 F 3 "~" H 14950 3000 50  0001 C CNN
 F 4 "-" H 14950 3000 50  0001 C CNN "LCSC"
+F 5 "-" H 14950 3000 50  0001 C CNN "Mouser"
 	1    14950 3000
 	-1   0    0    1   
 $EndComp
@@ -464,7 +502,8 @@ F 0 "D15" V 9946 2206 50  0000 R CNN
 F 1 "WS2812B" V 9855 2206 50  0000 R CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9950 2250 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10000 2175 50  0001 L TNN
-F 4 "-" H 9900 2550 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9900 2550 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 2550 50  0001 C CNN "Mouser"
 	1    9900 2550
 	0    -1   -1   0   
 $EndComp
@@ -476,7 +515,8 @@ F 0 "D16" V 9946 2906 50  0000 R CNN
 F 1 "WS2812B" V 9855 2906 50  0000 R CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9950 2950 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10000 2875 50  0001 L TNN
-F 4 "-" H 9900 3250 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9900 3250 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 3250 50  0001 C CNN "Mouser"
 	1    9900 3250
 	0    -1   -1   0   
 $EndComp
@@ -488,7 +528,8 @@ F 0 "D17" V 9946 3606 50  0000 R CNN
 F 1 "WS2812B" V 9855 3606 50  0000 R CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9950 3650 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10000 3575 50  0001 L TNN
-F 4 "-" H 9900 3950 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9900 3950 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 3950 50  0001 C CNN "Mouser"
 	1    9900 3950
 	0    -1   -1   0   
 $EndComp
@@ -500,7 +541,8 @@ F 0 "D14" V 9054 4294 50  0000 L CNN
 F 1 "WS2812B" V 9145 4294 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9150 3650 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9200 3575 50  0001 L TNN
-F 4 "-" H 9100 3950 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9100 3950 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9100 3950 50  0001 C CNN "Mouser"
 	1    9100 3950
 	0    1    1    0   
 $EndComp
@@ -512,7 +554,8 @@ F 0 "D13" V 9054 3594 50  0000 L CNN
 F 1 "WS2812B" V 9145 3594 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9150 2950 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9200 2875 50  0001 L TNN
-F 4 "-" H 9100 3250 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9100 3250 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9100 3250 50  0001 C CNN "Mouser"
 	1    9100 3250
 	0    1    1    0   
 $EndComp
@@ -524,7 +567,8 @@ F 0 "D12" V 9054 2894 50  0000 L CNN
 F 1 "WS2812B" V 9145 2894 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9150 2250 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9200 2175 50  0001 L TNN
-F 4 "-" H 9100 2550 50  0001 C CNN "LCSC"
+F 4 "C2761795" H 9100 2550 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9100 2550 50  0001 C CNN "Mouser"
 	1    9100 2550
 	0    1    1    0   
 $EndComp
@@ -537,6 +581,7 @@ F 1 "BAV70_Small" H 6350 8774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 8650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 6350 8650 50  0001 C CNN
 F 4 "C68978" H 6350 8650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6350 8650 50  0001 C CNN "Mouser"
 	1    6350 8650
 	1    0    0    -1  
 $EndComp
@@ -549,6 +594,7 @@ F 1 "2M" H 9359 1355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 9300 1400 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1810301612_UNI-ROYAL-Uniroyal-Elec-0805W8F2004T5E_C26112.pdf" H 9300 1400 50  0001 C CNN
 F 4 "C26112" H 9300 1400 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9300 1400 50  0001 C CNN "Mouser"
 	1    9300 1400
 	0    1    1    0   
 $EndComp
@@ -561,6 +607,7 @@ F 1 "AO3401A" V 9440 1700 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9300 1625 50  0001 L CIN
 F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 9100 1700 50  0001 L CNN
 F 4 "C15127" H 9100 1700 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9100 1700 50  0001 C CNN "Mouser"
 	1    9100 1700
 	0    1    1    0   
 $EndComp
@@ -573,6 +620,7 @@ F 1 "BAV70_Small" H 4950 8774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 8650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4950 8650 50  0001 C CNN
 F 4 "C68978" H 4950 8650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4950 8650 50  0001 C CNN "Mouser"
 	1    4950 8650
 	1    0    0    -1  
 $EndComp
@@ -585,6 +633,7 @@ F 1 "BAV70_Small" H 4950 6974 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 6850 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809211023_Changjiang-Electronics-Tech--CJ-BAV70_C68978.pdf" H 4950 6850 50  0001 C CNN
 F 4 "C68978" H 4950 6850 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4950 6850 50  0001 C CNN "Mouser"
 	1    4950 6850
 	1    0    0    -1  
 $EndComp
@@ -597,6 +646,7 @@ F 1 "10uF" H 3050 2750 50  0000 L CIN
 F 2 "Diode_SMD:D_0805_2012Metric" H 3150 2550 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811121310_Samsung-Electro-Mechanics-CL21A106KAYNNNE_C15850.pdf" H 3150 2550 50  0001 C CNN
 F 4 "C15850" H 3150 2550 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3150 2550 50  0001 C CNN "Mouser"
 	1    3150 2550
 	1    0    0    -1  
 $EndComp
@@ -609,6 +659,7 @@ F 1 "10uF" H 4350 2950 50  0000 L CIN
 F 2 "Diode_SMD:D_0805_2012Metric" H 4450 2650 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811121310_Samsung-Electro-Mechanics-CL21A106KAYNNNE_C15850.pdf" H 4450 2650 50  0001 C CNN
 F 4 "C15850" H 4450 2650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4450 2650 50  0001 C CNN "Mouser"
 	1    4450 2650
 	1    0    0    -1  
 $EndComp
@@ -621,6 +672,7 @@ F 1 "1k" V 10000 6300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 9900 6400 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811022111_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf" H 9900 6400 50  0001 C CNN
 F 4 "C17513" H 9900 6400 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 6400 50  0001 C CNN "Mouser"
 	1    9900 6400
 	0    -1   -1   0   
 $EndComp
@@ -633,6 +685,7 @@ F 1 "GREEN" H 9550 6300 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric" V 9500 6400 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1912111437_MEIHUA-MHT170UGCT_C397047.pdf" V 9500 6400 50  0001 C CNN
 F 4 "C397047" H 9500 6400 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9500 6400 50  0001 C CNN "Mouser"
 	1    9500 6400
 	-1   0    0    1   
 $EndComp
@@ -645,6 +698,7 @@ F 1 "1k" V 10000 6050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 9900 6150 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811022111_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf" H 9900 6150 50  0001 C CNN
 F 4 "C17513" H 9900 6150 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 6150 50  0001 C CNN "Mouser"
 	1    9900 6150
 	0    -1   -1   0   
 $EndComp
@@ -657,6 +711,7 @@ F 1 "GREEN" H 9550 6050 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric" V 9500 6150 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1912111437_MEIHUA-MHT170UGCT_C397047.pdf" V 9500 6150 50  0001 C CNN
 F 4 "C397047" H 9500 6150 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9500 6150 50  0001 C CNN "Mouser"
 	1    9500 6150
 	-1   0    0    1   
 $EndComp
@@ -669,6 +724,7 @@ F 1 "1k" V 10000 5800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 9900 5900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811022111_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf" H 9900 5900 50  0001 C CNN
 F 4 "C17513" H 9900 5900 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9900 5900 50  0001 C CNN "Mouser"
 	1    9900 5900
 	0    -1   -1   0   
 $EndComp
@@ -681,6 +737,7 @@ F 1 "GREEN" H 9550 5800 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric" V 9500 5900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1912111437_MEIHUA-MHT170UGCT_C397047.pdf" V 9500 5900 50  0001 C CNN
 F 4 "C397047" H 9500 5900 50  0001 C CNN "LCSC"
+F 5 "TODO" H 9500 5900 50  0001 C CNN "Mouser"
 	1    9500 5900
 	-1   0    0    1   
 $EndComp
@@ -693,6 +750,7 @@ F 1 "100k" H 5900 2950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 6050 3000 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1808271910_UNI-ROYAL-Uniroyal-Elec-0805W8F1003T5E_C17407.pdf" H 6050 3000 50  0001 C CNN
 F 4 "C17407" H 6050 3000 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6050 3000 50  0001 C CNN "Mouser"
 	1    6050 3000
 	1    0    0    -1  
 $EndComp
@@ -705,6 +763,7 @@ F 1 "AO3401A" V 6140 2250 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6000 2175 50  0001 L CIN
 F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 5800 2250 50  0001 L CNN
 F 4 "C15127" H 5800 2250 50  0001 C CNN "LCSC"
+F 5 "TODO" H 5800 2250 50  0001 C CNN "Mouser"
 	1    5800 2250
 	0    -1   1    0   
 $EndComp
@@ -717,6 +776,7 @@ F 1 "10uF" H 7650 2950 50  0000 L CIN
 F 2 "Diode_SMD:D_0805_2012Metric" H 7550 3000 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811121310_Samsung-Electro-Mechanics-CL21A106KAYNNNE_C15850.pdf" H 7550 3000 50  0001 C CNN
 F 4 "C15850" H 7550 3000 50  0001 C CNN "LCSC"
+F 5 "TODO" H 7550 3000 50  0001 C CNN "Mouser"
 	1    7550 3000
 	1    0    0    -1  
 $EndComp
@@ -729,6 +789,7 @@ F 1 "100k" V 6550 2350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 6650 2450 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1808271910_UNI-ROYAL-Uniroyal-Elec-0805W8F1003T5E_C17407.pdf" H 6650 2450 50  0001 C CNN
 F 4 "C17407" H 6650 2450 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6650 2450 50  0001 C CNN "Mouser"
 	1    6650 2450
 	0    -1   -1   0   
 $EndComp
@@ -741,6 +802,7 @@ F 1 "10uF" H 6500 2950 50  0000 L CIN
 F 2 "Diode_SMD:D_0805_2012Metric" H 6400 3000 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811121310_Samsung-Electro-Mechanics-CL21A106KAYNNNE_C15850.pdf" H 6400 3000 50  0001 C CNN
 F 4 "C15850" H 6400 3000 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6400 3000 50  0001 C CNN "Mouser"
 	1    6400 3000
 	1    0    0    -1  
 $EndComp
@@ -753,6 +815,7 @@ F 1 "XC6220" H 7100 2701 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7100 2775 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1810010324_Torex-Semicon-XC6220B331MR-G_C86534.pdf" H 7100 2550 50  0001 C CNN
 F 4 "C86534" H 7100 2450 50  0001 C CNN "LCSC"
+F 5 "TODO" H 7100 2450 50  0001 C CNN "Mouser"
 	1    7100 2450
 	1    0    0    -1  
 $EndComp
@@ -765,6 +828,7 @@ F 1 "B5819W" V 6450 2350 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-123" V 6250 2200 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1809140216_Changjiang-Electronics-Tech--CJ-B5819W-SL_C8598.pdf" V 6250 2200 50  0001 C CNN
 F 4 "C8598" H 6250 2200 50  0001 C CNN "LCSC"
+F 5 "TODO" H 6250 2200 50  0001 C CNN "Mouser"
 	1    6250 2200
 	0    -1   -1   0   
 $EndComp
@@ -777,6 +841,7 @@ F 1 "TP4056" H 3825 3084 50  0000 C CNN
 F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm_ThermalVias" H 3800 3200 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/szlcsc/1906261508_Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf" H 3800 3200 50  0001 C CNN
 F 4 "C16581" H 3825 3083 50  0001 C CNN "LCSC"
+F 5 "TODO" H 3850 2700 50  0001 C CNN "Mouser"
 	1    3850 2700
 	1    0    0    -1  
 $EndComp
@@ -789,6 +854,7 @@ F 1 "10k" H 4450 3300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4300 3250 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1810271610_UNI-ROYAL-Uniroyal-Elec-0805W8F1002T5E_C17414.pdf~" H 4300 3250 50  0001 C CNN
 F 4 "C17414" H 4300 3250 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4300 3250 50  0001 C CNN "Mouser"
 	1    4300 3250
 	-1   0    0    1   
 $EndComp
@@ -801,6 +867,7 @@ F 1 "BLUE" V 3050 2650 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric" V 2850 2550 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811011514_Everlight-Elec-17-21-BHC-AP1Q2-3T_C99870.pdf" V 2850 2550 50  0001 C CNN
 F 4 "C99870" H 2850 2550 50  0001 C CNN "LCSC"
+F 5 "TODO" H 2850 2550 50  0001 C CNN "Mouser"
 	1    2850 2550
 	0    -1   -1   0   
 $EndComp
@@ -813,6 +880,7 @@ F 1 "1k" H 3000 2700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 2850 2750 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1811022111_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf" H 2850 2750 50  0001 C CNN
 F 4 "C17513" H 2850 2750 50  0001 C CNN "LCSC"
+F 5 "TODO" H 2850 2750 50  0001 C CNN "Mouser"
 	1    2850 2750
 	1    0    0    -1  
 $EndComp
@@ -825,6 +893,7 @@ F 1 "SRV05-4" H 12200 8150 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 12600 7250 50  0001 C CNN
 F 3 "http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF" H 11900 7700 50  0001 C CNN
 F 4 "C85364" H 11900 7700 50  0001 C CNN "LCSC"
+F 5 "TODO" H 11900 7700 50  0001 C CNN "Mouser"
 	1    11900 7700
 	1    0    0    -1  
 $EndComp
@@ -837,6 +906,7 @@ F 1 "EC11" V 6695 8330 50  0000 L CNN
 F 2 "tornblue:MX_PG1350_EVQWGD001_LR_optional" H 6500 8260 50  0001 C CNN
 F 3 "~" H 6650 8360 50  0001 C CNN
 F 4 "-" H 6650 8100 50  0001 C CNN "LCSC"
+F 5 "-" H 6650 8100 50  0001 C CNN "Mouser"
 	1    6650 8100
 	0    -1   1    0   
 $EndComp
@@ -849,6 +919,7 @@ F 1 "SW_Push" H 3950 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3950 6800 50  0001 C CNN
 F 3 "~" H 3950 6800 50  0001 C CNN
 F 4 "-" H 3950 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 3950 6600 50  0001 C CNN "Mouser"
 	1    3950 6600
 	-1   0    0    -1  
 $EndComp
@@ -861,6 +932,7 @@ F 1 "SW_Push" H 5350 6794 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 5350 6800 50  0001 C CNN
 F 3 "~" H 5350 6800 50  0001 C CNN
 F 4 "-" H 5350 6600 50  0001 C CNN "LCSC"
+F 5 "-" H 5350 6600 50  0001 C CNN "Mouser"
 	1    5350 6600
 	-1   0    0    -1  
 $EndComp
@@ -873,6 +945,7 @@ F 1 "SW_Push" H 3950 9844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3950 9850 50  0001 C CNN
 F 3 "~" H 3950 9850 50  0001 C CNN
 F 4 "-" H 3950 9650 50  0001 C CNN "LCSC"
+F 5 "-" H 3950 9650 50  0001 C CNN "Mouser"
 	1    3950 9650
 	-1   0    0    -1  
 $EndComp
@@ -885,6 +958,7 @@ F 1 "SW_Push" H 3150 9844 50  0000 C CNN
 F 2 "tornblue:MX_PG1350_optional" H 3150 9850 50  0001 C CNN
 F 3 "~" H 3150 9850 50  0001 C CNN
 F 4 "-" H 3150 9650 50  0001 C CNN "LCSC"
+F 5 "-" H 3150 9650 50  0001 C CNN "Mouser"
 	1    3150 9650
 	1    0    0    -1  
 $EndComp
@@ -897,6 +971,7 @@ F 1 "750mA" V 11444 7050 50  0000 C CNN
 F 2 "Fuse:Fuse_1206_3216Metric" V 11480 7050 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1912111437_BUSSMANN-CC12H750MA-TR_C328915.pdf~" H 11550 7050 50  0001 C CNN
 F 4 "C328915" H 11550 7050 50  0001 C CNN "LCSC"
+F 5 "TODO" H 11550 7050 50  0001 C CNN "Mouser"
 	1    11550 7050
 	0    1    1    0   
 $EndComp
@@ -909,6 +984,7 @@ F 1 "2M" H 11759 3005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 11700 3050 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1810301612_UNI-ROYAL-Uniroyal-Elec-0805W8F2004T5E_C26112.pdf" H 11700 3050 50  0001 C CNN
 F 4 "C26112" H 11700 3050 50  0001 C CNN "LCSC"
+F 5 "TODO" H 11700 3050 50  0001 C CNN "Mouser"
 	1    11700 3050
 	1    0    0    -1  
 $EndComp
@@ -921,6 +997,7 @@ F 1 "806k" H 11759 2705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 11700 2750 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1810301642_UNI-ROYAL-Uniroyal-Elec-0805W8F8063T5E_C63494.pdf" H 11700 2750 50  0001 C CNN
 F 4 "C63494" H 11700 2750 50  0001 C CNN "LCSC"
+F 5 "TODO" H 11700 2750 50  0001 C CNN "Mouser"
 	1    11700 2750
 	1    0    0    -1  
 $EndComp
@@ -933,6 +1010,7 @@ F 1 "RESET" H 14350 4100 50  0000 C CNN
 F 2 "tornblue:SW_SPST_TS24CA" H 14350 4400 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/lcsc/1912111437_SHOU-HAN-TS24CA_C393942.pdf" H 14350 4400 50  0001 C CNN
 F 4 "C393942" H 14350 4200 50  0001 C CNN "LCSC"
+F 5 "TODO" H 14350 4200 50  0001 C CNN "Mouser"
 	1    14350 4200
 	1    0    0    -1  
 $EndComp
@@ -944,7 +1022,8 @@ F 0 "U3" H 13250 4165 50  0000 C CNN
 F 1 "nRF52840_holyiot_18010" H 13250 4074 50  0000 C CNN
 F 2 "kicad-keyboard-parts:nRF52840_holyiot_18010" H 13350 3050 50  0001 C CNN
 F 3 "http://www.holyiot.com/tp/2019042516322180424.pdf" H 13350 3050 50  0001 C CNN
-F 4 "-" H 13250 2650 50  0001 C CNN "LCSC"
+F 4 "nRF52840_holyiot_18010" H 13250 2650 50  0001 C CNN "LCSC"
+F 5 "TODO" H 13250 2650 50  0001 C CNN "Mouser"
 	1    13250 2650
 	1    0    0    -1  
 $EndComp
@@ -3884,6 +3963,8 @@ F 0 "J5" V 5250 3050 50  0000 R CNN
 F 1 "BATT_PIN" V 5150 3100 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5050 3050 50  0001 C CNN
 F 3 "~" H 5050 3050 50  0001 C CNN
+F 4 "-" H 5050 3050 50  0001 C CNN "LCSC"
+F 5 "-" H 5050 3050 50  0001 C CNN "Mouser"
 	1    5050 3050
 	0    1    -1   0   
 $EndComp
@@ -3894,8 +3975,9 @@ P 4750 3050
 F 0 "J1" V 4950 2950 50  0000 L CNN
 F 1 "BATT" V 4850 2900 50  0000 L CNN
 F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 4750 3050 50  0001 C CNN
-F 3 "~" H 4750 3050 50  0001 C CNN
-F 4 "-" H 4750 3050 50  0001 C CNN "LCSC"
+F 3 "https://datasheet.lcsc.com/lcsc/2102031704_JST-Sales-America-S2B-PH-SM4-TB-LF-SN_C295747.pdf" H 4750 3050 50  0001 C CNN
+F 4 "C295747" H 4750 3050 50  0001 C CNN "LCSC"
+F 5 "TODO" H 4750 3050 50  0001 C CNN "Mouser"
 	1    4750 3050
 	0    1    -1   0   
 $EndComp
