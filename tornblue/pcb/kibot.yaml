@@ -4,23 +4,8 @@ kibot:
 preflight:
   check_zone_fills: true
   ignore_unconnected: false
-  run_erc: true
-  run_drc: true
-
-  filters:
-    - filter: 'Ignore mousebite holes too close together'
-      error: '51'
-      regex:  ' mouse\-bite\-5mm\-slot '
-    - filter: 'Ignore missing courtyards'
-      error: '46'
-      regex:  ' (?:mouse\-bite\-5mm\-slot|SW51|SW53) '
-    - filter: 'Ignore courtyard overlap'
-      error: '45'
-      regex:  ' H? '
-    - filter: 'Ignore pad to close to pad'
-      error: '19'
-      regex:  ' B\d* '
-
+  run_erc: false
+  run_drc: false
 
 global:
   output: '%f-%i.%x'
@@ -34,10 +19,10 @@ filters:
         regex: '^C\d+'
 
   - name: only_elecrow
-    comment: 'Only parts with Mouser'
+    comment: 'Only parts with PartNumber'
     type: generic
     include_only:
-      - column: 'Mouser'
+      - column: 'PartNumber'
         regex: '^[^-]'
 
   - name: jlcpcb_fix_rotation
@@ -55,26 +40,30 @@ variants:
     pre_transform: jlcpcb_fix_rotation
 
 outputs:
-  - name: 'schematic'
-    comment: 'Schematic PDF'
-    type: pdf_sch_print
+  # Documents
 
-  - name: "ibom"
-    comment: "Iteractive bom"
-    type: ibom
+#  - name: 'schematic'
+#    comment: 'Schematic PDF'
+#    type: pdf_sch_print
 
-  - name: "pcbdraw"
-    comment: "2D render top"
-    type: pcbdraw
-    options:
-      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+#  - name: "ibom"
+#    comment: "Iteractive bom"
+#    type: ibom
 
-  - name: "pcbdraw"
-    comment: "2D render bottom"
-    type: pcbdraw
-    options:
-      bottom: true
-      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+#  - name: "pcbdraw-top"
+#    comment: "2D render top"
+#    type: pcbdraw
+#    options:
+#      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+
+#  - name: "pcbdraw-bottom"
+#    comment: "2D render bottom"
+#    type: pcbdraw
+#    options:
+#      bottom: true
+#      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
+
+# JLCPCB
 
   - name: jlcpcb_gerber
     comment: "Gerber files, JLCPCB"
@@ -111,7 +100,7 @@ outputs:
       - layer: B.Mask
       - layer: Edge.Cuts
 
-  - name: jlcpcb_drill 
+  - name: jlcpcb_drill
     comment: "Drill files, JLCPCB"
     type: excellon
     dir: jlcpcb/gerber
@@ -123,6 +112,17 @@ outputs:
       minimal_header: false
       mirror_y_axis: false
       map: gerber
+
+  - name: jlcpcb
+    comment: 'ZIP, JLCPCB'
+    type: compress
+    dir: jlcpcb
+    options:
+      files:
+        - from_output: jlcpcb_gerber
+          dest: /
+        - from_output: jlcpcb_drill
+          dest: /
 
   - name: jlcpcb_bom
     comment: 'BOM, JLCPCB'
@@ -143,6 +143,8 @@ outputs:
         - Footprint
         - field: 'LCSC'
           name: 'LCSC Part'
+
+# ELECROW
 
   - name: jlcpcb_position
     comment: 'Pick and place, JLCPCB'
@@ -167,18 +169,6 @@ outputs:
           name: Rotation
         - id: Side
           name: Layer
-
-  - name: jlcpcb
-    comment: 'ZIP, JLCPCB'
-    type: compress
-    dir: jlcpcb
-    options:
-      files:
-        - from_output: jlcpcb_gerber
-          dest: /
-        - from_output: jlcpcb_drill
-          dest: /
-
 
   - name: elecrow_gerbers
     comment: Gerbers compatible with Elecrow
@@ -222,8 +212,19 @@ outputs:
       npth_id: '-NPTH'
       output: "%f%i.TXT"
 
+  - name: elecrow
+    comment: ZIP file for Elecrow
+    type: compress
+    dir: elecrow
+    options:
+      files:
+        - from_output: elecrow_gerbers
+          dest: /
+        - from_output: elecrow_drill
+          dest: /
+
   - name: elecrow_bom
-    comment: 'BOM, JLCPCB'
+    comment: 'BOM, ELECROW'
     type: bom
     dir: elecrow
     options:
@@ -234,16 +235,31 @@ outputs:
         hide_stats_info: true
         quote_all: true
       columns:
-        - field: Value
-          name: Comment
+        - field: Row
+          name: '#'
         - field: References
-          name: Designator
-        - Footprint
-        - field: 'Mouser'
-          name: 'Mouser PN'
+          name: Reference
+        - field: Quantity Per PCB
+          name: QTY
+        - field: Value
+          name: Value
+        - field: Footprint
+          name: Package
+        - field: PartNumber
+          name: Manufacturer Part number
+        - field: Description
+          name: Description
+        - field: Qty
+          name: SMD
+        - field: THT
+          name: THT
+        - field: Original
+          name: Original
+        - field: Elecrow
+          name: Elecrow PN
 
   - name: elecrow_position
-    comment: 'Pick and place, JLCPCB'
+    comment: 'Pick and place, ELECROW'
     type: position
     dir: elecrow
     options:
@@ -264,14 +280,3 @@ outputs:
           name: Rotation
         - id: Side
           name: Layer
-
-  - name: elecrow
-    comment: ZIP file for Elecrow
-    type: compress
-    dir: elecrow
-    options:
-      files:
-        - from_output: elecrow_gerbers
-          dest: /
-        - from_output: elecrow_drill
-          dest: /
