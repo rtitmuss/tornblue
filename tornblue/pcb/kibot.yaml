@@ -151,23 +151,24 @@ outputs:
     dir: jlcpcb
     options:
       variant: jlcpcb_rotated
+      dnf_filter: only_jlcpcb
       format: CSV
       units: millimeters
-      separate_files_for_front_and_back: true
+      separate_files_for_front_and_back: false
       only_smd: true
       columns:
         - id: Ref
-          name: Designator
+          name: 'Designator'
         - Val
         - Package
         - id: PosX
-          name: "Mid X"
+          name: 'Mid X'
         - id: PosY
-          name: "Mid Y"
+          name: 'Mid Y'
         - id: Rot
-          name: Rotation
+          name: 'Rotation'
         - id: Side
-          name: Layer
+          name: 'Layer'
 
 # ELECROW
 
@@ -265,20 +266,29 @@ outputs:
     dir: elecrow
     options:
       variant: jlcpcb_rotated
+      dnf_filter: only_elecrow
       format: CSV
       units: millimeters
-      separate_files_for_front_and_back: true
+      separate_files_for_front_and_back: false
       only_smd: true
       columns:
         - id: Ref
-          name: Designator
-        - Val
-        - Package
+          name: 'Designator'
+        - id: Package
+          name: 'Footprint'
         - id: PosX
-          name: "Mid X"
+          name: 'Center X'
         - id: PosY
-          name: "Mid Y"
-        - id: Rot
-          name: Rotation
+          name: 'Center Y'
         - id: Side
-          name: Layer
+          name: 'Layer'
+        - id: Rot
+          name: 'Rotation'
+
+  - name: elecrow_fab
+    comment: 'Fab, ELECROW'
+    type: pdf
+    dir: elecrow
+    layers:
+      - F.Fab
+    output: '%f-parts-mapping.%x'
