@@ -30,7 +30,8 @@ filters:
     type: rot_footprint
     rotations:
       - ["^SOT-23-5", 0.0]
-      - ["^USB", 270.0]
+      - ["^USB", 180.0]
+      - ["EVQP", 90.0]
 
 variants:
   - name: jlcpcb_rotated
@@ -144,8 +145,6 @@ outputs:
         - field: 'LCSC'
           name: 'LCSC Part'
 
-# ELECROW
-
   - name: jlcpcb_position
     comment: 'Pick and place, JLCPCB'
     type: position
@@ -169,6 +168,8 @@ outputs:
           name: Rotation
         - id: Side
           name: Layer
+
+# ELECROW
 
   - name: elecrow_gerbers
     comment: Gerbers compatible with Elecrow
@@ -263,6 +264,7 @@ outputs:
     type: position
     dir: elecrow
     options:
+      variant: jlcpcb_rotated
       format: CSV
       units: millimeters
       separate_files_for_front_and_back: true
