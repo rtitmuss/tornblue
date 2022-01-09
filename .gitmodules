@@ -1,9 +1,9 @@
 [submodule "kicad-keyboard-parts.pretty"]
-	path = tornblue/pcb/kicad-keyboard-parts.pretty
+	path = pcb/kicad-keyboard-parts.pretty
 	url = git@github.com:ebastler/kicad-keyboard-parts.pretty.git
 [submodule "Type-C.pretty"]
-	path = tornblue/pcb/Type-C.pretty
+	path = pcb/Type-C.pretty
 	url = git@github.com:ai03-2725/Type-C.pretty.git
 [submodule "torn-bt/pcb/Panelization.pretty"]
-	path = tornblue/pcb/Panelization.pretty
+	path = pcb/Panelization.pretty
 	url = git@github.com:madworm/Panelization.pretty.git

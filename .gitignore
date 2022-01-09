@@ -1,6 +1,7 @@
-tornblue/pcb/grabcad/
-tornblue/pcb/docs/*/gerber/
-tornblue/pcb/docs/datasheets/
+pcb/grabcad/
+pcb/tornblue-backups/
+pcb/docs/*/gerber/
+pcb/docs/datasheets/
 
 *.000
 *.bak
