@@ -506,7 +506,7 @@
       "idf": "",
       "netlist": "tornblue.net",
       "specctra_dsn": "",
-      "step": "",
+      "step": "tornblue.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
