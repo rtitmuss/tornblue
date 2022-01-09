@@ -64,6 +64,11 @@ outputs:
 #      bottom: true
 #      style: '/usr/share/pcbdraw/styles/jlcpcb-green-hasl.json'
 
+  - name: datasheets
+    comment: "Download datasheets"
+    type: download_datasheets
+    dir: datasheets
+
 # JLCPCB
 
   - name: jlcpcb_gerber
