@@ -65,7 +65,7 @@ You can first check the that board is correctly connected using `swdp_scan` as s
      
 You can then program the bootloader, using:
 
-    $ arm-none-eabi-gdb --batch -ex "target extended-remote /dev/cu.usbmodem14101" -ex "mon swdp_scan" -ex "file tornblue_bootloader-0.6.3-48-gcc8ea2b_s140_6.1.1.hex" -ex "att 1" -ex "mon erase" -ex load
+    $ arm-none-eabi-gdb --batch -ex "target extended-remote /dev/cu.usbmodem14101" -ex "mon swdp_scan" -ex "file tornblue_bootloader-0.6.3-49-gbfd3b24_s140_6.1.1.hex" -ex "att 1" -ex "mon erase" -ex load
     Target voltage: 3.30V
     Available Targets:
     No. Att Driver
@@ -87,7 +87,7 @@ You can then program the bootloader, using:
 
 I found that I needed to program the bootloader twice for it to be successful.
 
-    $ arm-none-eabi-gdb --batch -ex "target extended-remote /dev/cu.usbmodem14101" -ex "mon swdp_scan" -ex "file tornblue_bootloader-0.6.3-48-gcc8ea2b_s140_6.1.1.hex" -ex "att 1" -ex "mon erase" -ex load
+    $ arm-none-eabi-gdb --batch -ex "target extended-remote /dev/cu.usbmodem14101" -ex "mon swdp_scan" -ex "file tornblue_bootloader-0.6.3-49-gbfd3b24_s140_6.1.1.hex" -ex "att 1" -ex "mon erase" -ex load
     Target voltage: 3.30V
     Available Targets:
     No. Att Driver
