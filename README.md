@@ -1,8 +1,10 @@
-﻿# TornBlue - a bluetooth split keyboard
+# TornBlue - a bluetooth split keyboard
 
 In this repo you can find information about the TornBlue a bluetooth split keyboard with SMT components. This is an iteration on the [Torn](https://github.com/rtitmuss/torn), which is a split keyboard using through hole components.
 
 **WARNING: These files are provided as a reference for designing keyboard PCBs, without liability and without any guarantees regarding functionality. This is untested work in progress, really don't assume anything here will work.**
+
+![](./img/PXL_20220313_115302733.jpg)
 
 ## Features
 
@@ -31,9 +33,11 @@ Optional features:
 - (Optional) 12 x [WS2812B 5050 leds](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111716&SearchText=WS2812B)
 - (Optional) ST link v2 (or similar) and SOIC-8 test clip for programming the bootloader
 
+![](./img/PXL_20220306_111349935.jpg)
+
 ## Build instructions
 
-You can find full [build instructions](./build.md), and information for [different cases](./README.md).
+You can find full [build instructions](./build.md), and information for [different cases](./case/README.md).
 
 ## Components
 

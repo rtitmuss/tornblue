@@ -1,4 +1,4 @@
-﻿# Build Instructions
+# Build Instructions
 
 There are the build instructions for the Tornblue keyboard.
 
@@ -8,9 +8,13 @@ The PCBs have been ordered using PCBA, or PCB assembly. This means that most com
 
 There are some optional components that need to be hand soldered on the underside of the board, the JST-PH battery connector and underglow LEDs. You will also need to solder the keyswitches and optional roller encoders.
 
+![](./img/pcba.jpg)
+
 ### Depanelization 
 
 The left and right PCBs have been manufactured as a single panel. First you need to remove the breakaway tabs, to get a clean cut you can use wire cutters and a file (for example see this [PCB Depaneling](https://www.youtube.com/watch?v=NLKeF43AOBY&t=121s) video).
+
+![](./img/PXL_20220306_110150227.jpg)
 
 ### 5 or 6 columns
 
@@ -20,13 +24,17 @@ If you are building a 5 column Tornblue keyboard you also need to break off the 
 
 The WS2812B 5050 leds need to be soldered in the **correct orientation**, on the underside of the board. There is a mark on one corner of the leds, this should be pointing to the top left of the PCB - next to the small vertical mark on the silkscreen. Carefully solder all six WS2812B leds.
 
+![](./img/PXL_20220306_124339999.png)
+
 ### JST-PH connector (optional)
 
 The JST-PH connector can be used for the battery connection, it is also possible to solder the battery with the through hole connectors near the USB port. **Do not connect the battery yet!**
 
 The JST-PH connector is soldered on the underneath of the PCB.  The two pads towards the top of the board connect the battery, and the lower two pads are for mechanical support.
 
-First apply some solder to one of the pads. Reheat the solder and slide the JST-PH connector in place. Check the connector is correctly positioned, and adjust if required. Then solder the remaining three pads.
+First apply some solder to one of the pads (as shown in the picture below). Reheat the solder and slide the JST-PH connector in place. Check the connector is correctly positioned, and adjust if required. Then solder the remaining three pads.
+
+![](./img/PXL_20220306_132236962.jpg)
 
 ## Bootloader
 
@@ -37,6 +45,8 @@ You need to program the Holyiot module with a bootloader and the zmk keyboard fi
 ## ZMK
 
 You can now install zmk.
+
+![](./img/zmk.jpg)
 
 _The tornblue board configuration is not yet included in the zmk repo, you need to download zmk from https://github.com/rtitmuss/zmk_
 
@@ -83,6 +93,8 @@ You can solder either Cherry MX compatible or Kailh Choc key switches. If you pl
 If you are using the JSP PH connector you can now plug your battery on the underside of the PCB. **The red wire MUST connect to the positive terminal marked 'PWR (+)'**.
 
 Alternatively you can solder the battery directly to the PCB using the through holes near the USB connector. **Be  very careful not to short the battery connectors.**
+
+![](./img/PXL_20220313_111612069.jpg)
 
 ## Your finished
 

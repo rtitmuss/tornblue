@@ -1,6 +1,8 @@
-﻿# Bootloader
+# Bootloader
 
 There are main options for programming nRF52540 boards, and these are well documented at [https://github.com/joric/nrfmicro/wiki/Bootloader](https://github.com/joric/nrfmicro/wiki/Bootloader). To program the tornblue I used a ST-Link/V2 with the Blackmagic firmware on OS X.
+
+![](./img/stlink.png)
 
 ## Installing the blackmagic firmware
 To install the blackmagic firmware on the ST-Link/V2 you need to first download and compile the following tool and firmware:
@@ -33,7 +35,7 @@ You can find the compiled bootloader at:
 # Connecting the programmer
 
 You can connect the programmer to the tornblue using a SOIC connector. Connect the SWD pads on the PCB to the 20 pin JTAG header on the ST-Link/V2 as follows:  
- 
+
 |PCB SWD|ST-Link/V2  |  
 |--|--|  
 |3.3V|VCC Pin 1|  
@@ -42,9 +44,8 @@ You can connect the programmer to the tornblue using a SOIC connector. Connect t
 |GND|GND Pin 8|
 
 The pinout on the ST-Link/V2 20 pin JTAG header is:
-![enter image description here](https://stm32-base.org/assets/img/pinouts/ARM_JTAG_SWD_Header.png)
 
-[TODO add picture]
+![](./img/swd.png)
 
 # Programming the bootloader
 
