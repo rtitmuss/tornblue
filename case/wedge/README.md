@@ -1,31 +1,57 @@
-﻿## 3d Printed Case
+# 3d Printed Wedge Case
+
+This is a wedge style case with a 14 degree angle for 5 column tornblue keyboards. Please ask if you'd like the design modified for a 6 column tornblue or other angles.
+
+## 3d printing
 
 ### Plate
 
-There is a 3d printable plate for MX switches. Remember to print and fit this before soldering your switches.
+There is an optional 3d printable plate for MX switches. Remember to print and fit this before soldering your switches. The plate has cutouts for the roller encoder.
 
-| 5 cols | 6 cols |
-|--|--|
-| [5_Plate.stl](case/wedge/5_Plate.stl) | [6_Plate.stl](case/wedge/6_Plate.stl) |
+[5_Plate.3mf](5_Plate.3mf)
 
-### MX Switch Wedge Case
+### Case
 
 You can 3d print a wedge case for your Tornblue using the follow files:
 
-| 5 cols | 6 cols |
-|--|--|
-| [5_Base.3mf](case/wedge/5_Base.3mf) | [6_Base.3mf](case/wedge/6_Base.3mf) |
-| [5_Wall.3mf](case/wedge/5_Wall.3mf) | [6_Wall.3mf](case/wedge/6_Wall.3mf) | 
+[5_Base.3mf](case/wedge/5_Base.3mf), [5_Edge.3mf](case/wedge/5_Edge.3mf)
 
-First print Base.3mf. This is the support for the PCB. *You must print this first before the wall.*
+No supports are required for the base.
 
-Second print Wall.3mf. The wall prints upside down, so the visible surface is on the print bed. This print will pause at layer 113 (about 4 hours into the print on a prusa mk3). You now need to fit the base upside down into the wall. This will be a snug fit. Make sure that the base fits perfectly around all the edges before continuing the print. If everything works the next layer will bridge over the edge of the base, creating one print.
+The edge prints upside down so the visible surface is on the print bed. You need to print with supports.
 
-You can fit two layers of 4mm car tyre balance weights in the case. Each side will weight around 350g. The weights improve the sound profile and feel of the keyboard.
+## Post processing
 
-Carefully add the PCB and battery into the case. Secure with four short m2.5 screws.
+You need to do some post processing on the case wall. Remove the support from the top of the case and clean up the bridging by the USB connector and switch holes. Give the case a good rub to remove any stray fibers.
 
-Repeat this for the right side of the case, but make sure to print the parts mirrored.
+![](./img/PXL_20220313_101206509.MP.jpg)
 
-_rev0: You will need to enlarge the cutout for the USB cable on the right side._
- 
+![](./img/PXL_20220313_102022973.jpg)
+
+Add four M3 heat set inserts in the bottom of each half of the case.
+
+![](./img/PXL_20220313_103142888.MP.jpg)
+
+## Weights
+
+You can optionally add up to 180g of weight in the bottom of the case. The case is designed to use car wheel balance weights, with sizes 10g: 23mm x 19mm. 5g: 12mm x 19mm. Height 4mm (including adhesive padding). For example: [US](https://www.amazon.com/Pit-Posse-Balancing-Weights-Adhesive/dp/B00OQWS98S/ref=sr_1_13?dchild=1&keywords=balancing+weight&qid=1620718949&sr=8-13), [UK](https://www.amazon.co.uk/FIERCE-CYCLE-Balance-Weights-Motorcycle/dp/B07QQ539GV/ref=sr_1_7?crid=7JSFKDWAYNL7&dchild=1&keywords=balancing+weights&qid=1620718843&sprefix=balancing+wei%2Caps%2C164&sr=8-7), [SE](https://www.amazon.se/gp/product/B01GHKG18G/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1).
+
+![](./img/PXL_20220313_111216398.MP.jpg)
+
+## Assembly
+
+Place the completed PCB on the base, taking care not to trap the battery cable. Use two M3 screws to attach the PCB to the base as shown below.
+
+![](./img/PXL_20220313_112134795.MP.jpg)
+
+Carefully slide the case wall over the base. Check the clearance near the on/off switch. Use two M3 screws to swecure the top of the case.
+
+![](./img/PXL_20220313_112420250.MP.jpg)
+
+Add adhesive feet to the underneath of the case.
+
+![](./img/PXL_20220313_112427133.jpg)
+
+Your keyboard is now finished, enjoy!
+
+![](./img/PXL_20220313_115302733.jpg)
