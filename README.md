@@ -2,6 +2,8 @@
 
 In this repo you can find information about the TornBlue a bluetooth split keyboard with SMT components. This is an iteration on the [Torn](https://github.com/rtitmuss/torn), which is a split keyboard using through hole components.
 
+You can ask questions and get help on the [Torn Discord channel](https://discord.gg/mamAqNccju).
+
 **WARNING: These files are provided as a reference for designing keyboard PCBs, without liability and without any guarantees regarding functionality. This is untested work in progress, really don't assume anything here will work.**
 
 ![](./img/PXL_20220313_115302733.jpg)
