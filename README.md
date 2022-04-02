@@ -7,35 +7,33 @@ In this repo you can find information about the TornBlue a bluetooth split keybo
 ## Features
 
 - nRF52840 using [zmk](https://zmk.dev/) keyboard firmware
-- Battery charging for a 3.7v lithium rechargeable battery (JST connector)
+- Battery charging for a 3.7v lithium rechargeable battery (JST-PH connector)
 - 6x3 or 5x3 layout with detachable outer column
 - 3 leds and 1 charging led
 -  ([SOIC test clip footprint](https://hackaday.com/2019/06/13/soicbite-a-program-debug-connector-for-an-soic-test-clip/)) for programming
-- Breakout with switchable 3.5v and gpios
+- Breakout with switchable 3.3v and gpios
 - Battery level reported over BT
-- Supports soldered or socketed MX Switches, or soldered Choc Switches
+- Supports soldered Cherry MX compatible or Kailh Choc key switches
 - Horizontal reset button (case friendly) 
-- JLCPCB PCBA (pcb assembly); handsoldering required for the Holyiot RF module, underglow leds and jst connector 
+- JLCPCB PCBA (pcb assembly); handsoldering required for underglow leds and JST-PH connector 
 
-Rev 0 includes some experimental features, that are subject to change:
+Optional features:
 
 - Underglow leds 
-- Optional Panasonic EVQWGD001 wheel encoder
-- Reversible board when using soldered MX or Choc switches
+- Optional Panasonic EVQWGD001 wheel encoders
 
 ## Parts required
 
-- 2x assembled TornBlue Rev 0 PCBs
-- 2x [Holyiot YJ-18010](https://www.aliexpress.com/item/32868002366.html) nRF52840 module
-- 2x [JST-PH connector](https://www.electrokit.com/en/product/header-ph-2p-2mm-right-angle-smd/). 2mm pitch. Side entry. Surface-mounted.
+- 2x assembled TornBlue Rev 1 PCBs
 - 2x 3.7v lithium rechargeable battery with JST connector. **SAFETY NOTE: Only use a LiIon battery with over-charging and over-use protection. Check the battery polarity before connecting.**
-- ST link v2 (or similar) and SOIC-8 test clip for programming the bootloader
+- (Optional) 2x [JST-PH connector](https://www.electrokit.com/en/product/header-ph-2p-2mm-right-angle-smd/). 2mm pitch. Side entry. Surface-mounted.
 - (Optional) 2 x [Panasonic EVQWGD001](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111528&SearchText=Panasonic+EVQWGD001) wheel encoder
 - (Optional) 12 x [WS2812B 5050 leds](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20210830111716&SearchText=WS2812B)
+- (Optional) ST link v2 (or similar) and SOIC-8 test clip for programming the bootloader
 
 ## Build instructions
 
-You can find full [build instructions](./build.md), including information for the 3d printed case.
+You can find full [build instructions](./build.md), and information for [different cases](./README.md).
 
 ## Components
 
@@ -56,10 +54,15 @@ The main components are:
 
 The following projects were used as reference designs.
 
-[ZMK hardware design guide](https://github.com/ebastler/zmk-designguide) (CERN Open Hardware Licence Version 2 - Permissive) - note the battery charging circuit might be unsafe, see this information about [TP4056](https://www.best-microcontroller-projects.com/tp4056.html)
-[isometria75](https://github.com/ebastler/isometria-75/tree/v2) (BSD 2-Clause License)
-[Unified USB type-C PCB](https://github.com/ebastler/unified-usb-pcb) (BSD 2-Clause License)
-[Nice!Nano](https://nicekeyboards.com/docs/nice-nano/pinout-schematic)
-[nRFMicro](https://github.com/joric/nrfmicro/wiki) (Public domain)
-[Adafruit nRF52840](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/downloads) (Creative Commons Attribution, Share-Alike)
+- [ZMK hardware design guide](https://github.com/ebastler/zmk-designguide) (CERN Open Hardware Licence Version 2 - Permissive) - note the battery charging circuit might be unsafe, see this information about [TP4056](https://www.best-microcontroller-projects.com/tp4056.html)
+
+- [isometria75](https://github.com/ebastler/isometria-75/tree/v2) (BSD 2-Clause License)
+
+- [Unified USB type-C PCB](https://github.com/ebastler/unified-usb-pcb) (BSD 2-Clause License)
+
+- [Nice!Nano](https://nicekeyboards.com/docs/nice-nano/pinout-schematic)
+
+- [nRFMicro](https://github.com/joric/nrfmicro/wiki) (Public domain)
+
+- [Adafruit nRF52840](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/downloads) (Creative Commons Attribution, Share-Alike)
 

@@ -1,93 +1,40 @@
 ﻿# Build Instructions
 
-This is the build instructions for the Tornblue keyboard.
+There are the build instructions for the Tornblue keyboard.
 
-## PCB Assembly
+## PCBs
 
-You can order the PCBs with PCBA, in this case the PCBs come mostly assembled. A few components need to be hand soldered: the Holyiot module, JST-PH connector and underglow LEDs.
+The PCBs have been ordered using PCBA, or PCB assembly. This means that most components have been installed during manufacturing.
+
+There are some optional components that need to be hand soldered on the underside of the board, the JST-PH battery connector and underglow LEDs. You will also need to solder the keyswitches and optional roller encoders.
+
+### Depanelization 
+
+The left and right PCBs have been manufactured as a single panel. First you need to remove the breakaway tabs, to get a clean cut you can use wire cutters and a file (for example see this [PCB Depaneling](https://www.youtube.com/watch?v=NLKeF43AOBY&t=121s) video).
 
 ### 5 or 6 columns
 
-If you are building a 5 column Tornblue keyboard you need to fist break off the outer column.
-
-### Holyiot module
-
-The Holyiot module is designed to be mounted on another PCB. You can see a guide on [how to solder castellated mounting holes](https://learn.sparkfun.com/tutorials/how-to-solder-castellated-mounting-holes/all).
-
-You'll need a fine tip soldering iron, as the castellations are a narrow pitch. Be careful to not apply too much solder, as it is easy to short between the pins. Don't short between the pins and the metal shield on the module. It can be good to have a solder sucker and desoldering wick to clean up the joints if required.
-
-### JST-PH connector
-
-The JST-PH connector is soldered on the underneath of the PCB.  The two pads towards the top of the board connect the battery, and the lower two pads are for mechanical support.
-
-You can use the same technique as the Holyiot module; first apply some solder to one of the pads. Reheat the solder and slide the JST-PH connector in place. Check the connector is correctly positioned, and adjust if required. Then solder the remaining three pads.
+If you are building a 5 column Tornblue keyboard you also need to break off the outer column.
 
 ### Underglow LEDs (optional)
 
-The WS2812B 5050 leds need to be soldered in the correct orientation, on the underside of the board. There is a mark on one corner of the leds, this should be pointing to the top left of the PCB - next to the small vertical mark on the silkscreen. Carefully solder all six WS2812B leds.
+The WS2812B 5050 leds need to be soldered in the **correct orientation**, on the underside of the board. There is a mark on one corner of the leds, this should be pointing to the top left of the PCB - next to the small vertical mark on the silkscreen. Carefully solder all six WS2812B leds.
 
-You should install the bootloader, zmk and test the PCB before adding the key switches, battery and case.
+### JST-PH connector (optional)
 
-## Bootloader and zmk
+The JST-PH connector can be used for the battery connection, it is also possible to solder the battery with the through hole connectors near the USB port. **Do not connect the battery yet!**
+
+The JST-PH connector is soldered on the underneath of the PCB.  The two pads towards the top of the board connect the battery, and the lower two pads are for mechanical support.
+
+First apply some solder to one of the pads. Reheat the solder and slide the JST-PH connector in place. Check the connector is correctly positioned, and adjust if required. Then solder the remaining three pads.
+
+## Bootloader
+
+The bootloader is pre-programmed on the board. If necessary you can [see how to program the bootloader](./bootloader.md). 
 
 You need to program the Holyiot module with a bootloader and the zmk keyboard firmware.
 
-### Bootloader 
-
-The PCB is designed for a SOIC-8 test clip to be used to flash the bootloader. You need to modify your test clip using these [instructions](https://github.com/SimonMerrett/SOICbite/blob/master/HOWTO_mod_clip.md). Or you could solder wires to the SWD pads for the programming.
-
-You can use the Adafruit nRF52 bootloader. Download the pre-built [pca10056 version](https://github.com/adafruit/Adafruit_nRF52_Bootloader/releases).
-
-#### ST Link v2
-
-You need to connect the SWD pads on the PCB to the 20 pin JTAG header on the ST Link v2 as follows:
-
-|PCB SWD|ST Link v2  |
-|--|--|
-|SWD IO|Pin 7|
-|SWD CLK|Pin 9|
-|GND|Pin 8|
-
-Connect both the ST Link v2 USB and keyboard USB to your PC. The blue charging LED on the keyboard will blink, this is normal when no battery is attached.
-
-Install openocd, and run the following command:
-
-    openocd -f interface/stlink.cfg -f target/nrf52.cfg -c "gdb_flash_program enable" -c "gdb_breakpoint_override hard" -c "init" -c "reset halt" -c "flash write_image erase ./pca10056_bootloader-0.6.2_s140_6.1.1.hex"
-
-If this is successful it will program the bootloader, the console output should look like:
-
-	Open On-Chip Debugger 0.11.0
-	Licensed under GNU GPL v2
-	For bug reports, read
-	 http://openocd.org/doc/doxygen/bugs.html
-	Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'. 
-	Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
-	
-	nRF52 device has a CTRL-AP dedicated to recover the device from AP lock.
-	A high level adapter (like a ST-Link) you are currently using cannot access
-	the CTRL-AP so 'nrf52_recover' command will not work. 
-	Do not enable UICR APPROTECT.
-
-	force hard breakpoints
-
-	Info : clock speed 1000 kHz
-	Info : STLINK V2J31S7 (API v2) VID:PID 0483:3748
-	Info : Target voltage: 3.261214
-	Info : nrf52.cpu: hardware has 6 breakpoints, 4 watchpoints
-	Info : starting gdb server for nrf52.cpu on 3333
-	Info : Listening on port 3333 for gdb connections 
-	target halted due to debug-request, current mode: Thread 
-	xPSR: 0x01000000 pc: 0x00000a80 msp: 0x20000400 
-	Info : nRF52840-xxAA(build code: D0) 1024kB Flash, 256kB RAM 
-	Info : Padding image section 0 at 0x00000b00 with 1280 bytes Info : Flash write discontinued at 0x00025de8, next section at 0x000f4000 
-	Warn : Adding extra erase range, 0x00025de8 .. 0x00025fff Info : Padding image section 2 at 0x000fc5b4 with 4684 bytes 
-	Warn : Adding extra erase range, 0x000fd858 .. 0x000fdfff 
-	Warn : Adding extra erase range, 0x10001000 .. 0x10001013 
-	Warn : Adding extra erase range, 0x1000101c .. 0x10001fff 
-	auto erase enabled 
-	wrote 194120 bytes from file ./pca10056_bootloader-0.6.2_s140_6.1.1.hex in 7.985752s (23.739 KiB/s)
-
-### zmk
+## ZMK
 
 You can now install zmk.
 
@@ -113,58 +60,33 @@ You can build zmk for the right side of the keyboard using:
 
 Connect the left side of the keyboard with USB. Press the reset button quickly twice. You should see a USB drive called `NRF52BOOT`. Copy the `zmk.uf2` from the `tornblue_left` build folder. zmk will be installed and the keyboard will restart.
 
-Repeat this with the right side of the keyboard, but copt the `zmk.uf2` file from the `tornblue_right` build folder.
+Repeat this with the right side of the keyboard, but copy the `zmk.uf2` file from the `tornblue_right` build folder.
 
 ### Test
 
-You can now test the PCB. Connect the keyboard to your PCB with a USB cable. Use tweezers or similar to short the key switch pads and test that all the keys work, on both sides of the keyboard.
+You can now test the PCBs. Power both sides of your keyboard to your PC with two USB cables Use tweezers or similar to short the key switch pads and test that all the keys work, on both sides of the keyboard. Note you don't need to pair the bluetooth yet the keycodes will be sent over USB.
 
 ## Key switches and battery
 
 ### Encoder (optional)
 
-You can optionally use a horizontal encoder. Position the encoder clip at an angle on the PCB, and carefully rotate it down. Solder the pins.
+You can optionally use a Panasonic EVQWGD001 horizontal encoder. Position the encoder clip at an angle on the PCB, and carefully rotate it down. Solder the pins.
 
-_Rev0: You can only use an encoder on the left side._
+_ZMK currently only supports the encoder on the left side of the keyboard. A patch is needed to support encoders on both sides._
 
 ### Key switches
 
-You can solder either Cheery MX compatible key or Kailh Choc key switches. Remember to insert the key switches in the plate before soldering if required.
-
-_Rev0: You can use Kailh MX sockets on the left side, but must solder the switches on the right side._
+You can solder either Cherry MX compatible or Kailh Choc key switches. If you plan to use a plate remember to insert the key switches before soldering.
 
 ### Battery
 
-Plug your battery into to the JST PH connector on the underside of the PCB. **The red wire MUST connect to the positive terminal marked 'PWR (+)'**.
+If you are using the JSP PH connector you can now plug your battery on the underside of the PCB. **The red wire MUST connect to the positive terminal marked 'PWR (+)'**.
 
-## 3d Printed Case
+Alternatively you can solder the battery directly to the PCB using the through holes near the USB connector. **Be  very careful not to short the battery connectors.**
 
-### Plate
+## Your finished
 
-There is a 3d printable plate for MX switches. Remember to print and fit this before soldering your switches.
+The PCB assembly if now complete. You can use one of the [case designs](./case/README.md), or make your own.
 
-| 5 cols | 6 cols |
-|--|--|
-| [5_Plate.stl](case/wedge/5_Plate.stl) | [6_Plate.stl](case/wedge/6_Plate.stl) |
+You can now use your new Bluetooth tornblue keyboard by pairing it with your PC, and customising zmk as required.
 
-### MX Switch Wedge Case
-
-You can 3d print a wedge case for your Tornblue using the follow files:
-
-| 5 cols | 6 cols |
-|--|--|
-| [5_Base.3mf](case/wedge/5_Base.3mf) | [6_Base.3mf](case/wedge/6_Base.3mf) |
-| [5_Wall.3mf](case/wedge/5_Wall.3mf) | [6_Wall.3mf](case/wedge/6_Wall.3mf) | 
-
-First print Base.3mf. This is the support for the PCB. *You must print this first before the wall.*
-
-Second print Wall.3mf. The wall prints upside down, so the visible surface is on the print bed. This print will pause at layer 113 (about 4 hours into the print on a prusa mk3). You now need to fit the base upside down into the wall. This will be a snug fit. Make sure that the base fits perfectly around all the edges before continuing the print. If everything works the next layer will bridge over the edge of the base, creating one print.
-
-You can fit two layers of 4mm car tyre balance weights in the case. Each side will weight around 350g. The weights improve the sound profile and feel of the keyboard.
-
-Carefully add the PCB and battery into the case. Secure with four short m2.5 screws.
-
-Repeat this for the right side of the case, but make sure to print the parts mirrored.
-
-_rev0: You will need to enlarge the cutout for the USB cable on the right side._
- 
