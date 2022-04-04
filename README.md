@@ -6,7 +6,7 @@ You can ask questions and get help on the [Torn Discord channel](https://discord
 
 **WARNING: These files are provided as a reference for designing keyboard PCBs, without liability and without any guarantees regarding functionality. This is untested work in progress, really don't assume anything here will work.**
 
-![](./img/PXL_20220313_115302733.jpg)
+![](./img/PXL_20220404_153504274.jpg)
 
 ## Features
 
@@ -25,6 +25,8 @@ Optional features:
 
 - Underglow leds 
 - Optional Panasonic EVQWGD001 wheel encoders
+
+![](./img/PXL_20220313_115302733.jpg)
 
 ## Parts required
 
@@ -72,3 +74,8 @@ The following projects were used as reference designs.
 
 - [Adafruit nRF52840](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/downloads) (Creative Commons Attribution, Share-Alike)
 
+## Showcase
+
+![](./img/IMG_2203.jpeg)
+
+![](./img/IMG_2204.jpeg)
