@@ -14,7 +14,7 @@ There is an optional 3d printable plate for MX switches. Remember to print and f
 
 You can 3d print a wedge case for your Tornblue using the follow files:
 
-[5_Base.3mf](case/wedge/5_Base.3mf), [5_Edge.3mf](case/wedge/5_Edge.3mf)
+[5_Base.3mf](5_Base.3mf), [5_Edge.3mf](5_Edge.3mf)
 
 No supports are required for the base.
 
