@@ -4,7 +4,7 @@ The following case designs are available for Tornblue.
 
 ## 3D printed wedge case
 
-You can download the [files and instructions](./wedge/README.md).
+This is a hi-pro style wedge case. You can download the [files and instructions](./wedge/README.md).
 
 ![](./wedge/img/PXL_20220313_115302733.jpg)
 
@@ -13,6 +13,12 @@ You can download the [files and instructions](./wedge/README.md).
 You can download the [files and instructions](./stacked-acrylic/README.md).
 
 ![](./stacked-acrylic/img/stacked-acrylic-case.jpeg)
+
+## Mini Wedge Case
+
+This is a plateless wedge case. You can download the [files and instructions](./mini-wedge/README.md).
+
+![](./mini-wedge/img/PXL_20220813_160638719.jpg)
 
 ## Fusion 360 design files
 
