@@ -4,7 +4,7 @@ This is a high-profile case made of a stack of laser-cut acrylic/metal sheets. I
 
 With the exception of the switch plate, each layer is cut from 3mm acrylic. The switch plate is 1.5-1.6mm and can be cut from either acrylic or metal.
 
-[Fusion 360 File](./TornBlue Stacked Acrylic Plate Case.f3d)
+[Fusion 360 File](./StackedAcrylicCase.f3d)
 
 In addition to the layers you will need screws and standoffs to mount the layers:
 
@@ -18,6 +18,6 @@ For the tenting legs you will need:
 
 ## Images
 
-[[./img/stacked-acrylic-case.jpeg]]
-[[./img/stacked-acrylic-left.jpeg]
-[[./img/stacked-acrylic-bottom.jpeg]]
+![](./img/stacked-acrylic-case.jpeg)
+![](./img/stacked-acrylic-left.jpeg)
+![](./img/stacked-acrylic-bottom.jpeg)

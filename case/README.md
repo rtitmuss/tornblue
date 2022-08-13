@@ -8,6 +8,12 @@ You can download the [files and instructions](./wedge/README.md).
 
 ![](./wedge/img/PXL_20220313_115302733.jpg)
 
+## Stacked Acrlyic Case
+
+You can download the [files and instructions](./stacked-acrylic/README.md).
+
+![](./stacked-acrylic/img/stacked-acrylic-case.jpeg)
+
 ## Fusion 360 design files
 
 If you want to make your own case designyou can use this [fusion 360 design file](./fusion360/tornblue r1.f3d). This design includes the KiCad 3d model and a basic sketch for the keyboard.
