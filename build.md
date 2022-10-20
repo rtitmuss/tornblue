@@ -38,9 +38,10 @@ First apply some solder to one of the pads (as shown in the picture below). Rehe
 
 ## Bootloader
 
-The bootloader is pre-programmed on the board. If necessary you can [see how to program the bootloader](./bootloader.md). 
+If you bought boards directly from rtitmuss then bootloader is pre-programmed on the board. 
 
-You need to program the Holyiot module with a bootloader and the zmk keyboard firmware.
+If you are using your own boards then you will need to program the bootloader yourself before installing ZMK. [See how to program the bootloader](./bootloader.md). 
+
 
 ## ZMK
 
