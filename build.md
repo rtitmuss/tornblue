@@ -59,6 +59,11 @@ _The tornblue board configuration is not yet included in the zmk repo, you need 
 
 To build the firmware on your PC follow the [zmk installation instructions](https://zmk.dev/docs/development/setup).
 
+Once thats done, checkout tornblue and move to the /app dir
+	
+	git checkout tornblue
+	cd app
+
 You can build zmk for the left side of the keyboard using:
 
 	west build -p -d build/tornblue_left -b tornblue_left -- -DZMK_CONFIG=/Users/richardt/keyboard/miryoku-zmk-config/config/
