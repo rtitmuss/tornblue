@@ -61,7 +61,7 @@ To build the firmware on your PC follow the [zmk installation instructions](http
 
 Once thats done, checkout tornblue and move to the /app dir
 	
-	git checkout tornblue
+	git checkout tornblue_r1
 	cd app
 
 You can build zmk for the left side of the keyboard using:
