@@ -32,7 +32,10 @@ jobs:
     - name: Run KiBot
       uses: INTI-CMNB/KiBot@v2_k6
       with:
-        quickstart: YES
+        config: pcb/config.kibot.yaml
+        dir: Generated
+        schema: pcb/tornblue.kicad_sch
+        board: pcb/tornblue.kicad_pcb
 
     - run: sudo chmod -R a+r Generated
       

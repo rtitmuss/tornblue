@@ -1,0 +1,1425 @@
+# This is a working example.
+# For a more complete reference use `--example`
+kibot:
+  version: 1
+
+global:
+  filters:
+  - number: 1007
+  - number: 1015
+  - number: 58
+
+import:
+- file: Elecrow
+- file: FusionPCB
+- file: JLCPCB
+- file: MacroFab_XYRS
+- file: PCB2Blender_2_1
+- file: PCBWay
+
+outputs:
+#- name: basic_blender_export
+#  comment: 3D view from top/30 deg/bottom (Blender)
+#  type: blender_export
+#  dir: 3D
+#  options:
+#    pcb3d: _PCB2Blender_2_1
+#    outputs:
+#    - type: render
+#    - type: blender
+#    point_of_view:
+#    - view: top
+#    - rotate_x: 30
+#      rotate_z: -20
+#      file_id: _30deg
+#    - view: bottom
+- name: basic_boardview
+  comment: Board View export
+  type: boardview
+  dir: Assembly
+- name: generic_bom_html
+  comment: Generic Bill of Materials in HTML format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: HTML
+    count_smd_tht: true
+- name: generic_bom_csv
+  comment: Generic Bill of Materials in CSV format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: CSV
+    count_smd_tht: true
+- name: generic_bom_hrtxt
+  comment: Generic Bill of Materials in HRTXT format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: HRTXT
+    hrtxt:
+      separator: '|'
+    count_smd_tht: true
+- name: generic_bom_tsv
+  comment: Generic Bill of Materials in TSV format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: TSV
+    count_smd_tht: true
+- name: generic_bom_xml
+  comment: Generic Bill of Materials in XML format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: XML
+    count_smd_tht: true
+- name: generic_bom_xlsx
+  comment: Generic Bill of Materials in XLSX format
+  type: bom
+  dir: BoM/Generic
+  options:
+    format: XLSX
+    count_smd_tht: true
+- name: positional_bom_html
+  comment: Positional Bill of Materials in HTML format
+  type: bom
+  dir: BoM/Positional
+  options:
+    format: HTML
+    columns: &id001
+    - Row
+    - Description
+    - Part
+    - Part Lib
+    - References
+    - Value
+    - Footprint
+    - Footprint Lib
+    - Quantity Per PCB
+    - Build Quantity
+    - Status
+    - Datasheet
+    - Sheetpath
+    - Source BoM
+    - Footprint X
+    - Footprint Y
+    - Footprint Rot
+    - Footprint Side
+    - Footprint Type
+    - Footprint Populate
+    - Footprint X-Size
+    - Footprint Y-Size
+    count_smd_tht: true
+    html:
+      style: modern-red
+- name: positional_bom_xlsx
+  comment: Positional Bill of Materials in XLSX format
+  type: bom
+  dir: BoM/Positional
+  options:
+    format: XLSX
+    columns: *id001
+    count_smd_tht: true
+    xlsx:
+      style: modern-red
+- name: costs_bom_xlsx
+  comment: Costs Bill of Materials in XLSX format
+  type: bom
+  dir: BoM/Costs
+  options:
+    format: XLSX
+    count_smd_tht: true
+    xlsx:
+      style: modern-green
+      kicost: true
+      specs: true
+      kicost_api_disable: KitSpace
+    pre_transform: _kicost_rename
+- name: macrofab_xyrs
+  comment: Pick and place file, XYRS style
+  extends: _macrofab_xyrs
+  type: bom
+  options:
+    columns:
+    - field: References
+      name: Designator
+    - field: Footprint X
+      name: X-Loc
+    - field: Footprint Y
+      name: Y-Loc
+    - field: Footprint Rot
+      name: Rotation
+    - field: Footprint Side
+      name: Side
+    - field: Footprint Type
+      name: Type
+    - field: Footprint X-Size
+      name: X-Size
+    - field: Footprint Y-Size
+      name: Y-Size
+    - field: Value
+    - field: Footprint
+    - field: Footprint Populate
+      name: Populate
+  dir: Position
+- name: basic_diff_pcb
+  comment: PCB diff between the last two changes
+  type: diff
+  dir: diff
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+  options:
+    old: KIBOT_LAST-1
+    old_type: git
+    new: HEAD
+    new_type: git
+    cache_dir: /github/workspace/.cache
+    add_link_id: true
+- name: basic_diff_sch
+  comment: Schematic diff between the last two changes
+  type: diff
+  dir: diff
+  options:
+    old: KIBOT_LAST-1
+    old_type: git
+    new: HEAD
+    new_type: git
+    cache_dir: /github/workspace/.cache
+    add_link_id: true
+    pcb: false
+- name: basic_download_datasheets
+  comment: Download the datasheets
+  type: download_datasheets
+  dir: Datasheets
+- name: basic_dxf
+  comment: Individual layers in DXF format
+  type: dxf
+  dir: Individual_Layers/DXF
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: basic_dxf_sch_print
+  comment: Schematic in DXF format
+  type: dxf_sch_print
+  dir: Schematic
+- name: basic_excellon
+  comment: Drill files in EXCELLON format
+  type: excellon
+  dir: Gerbers_and_Drill
+  options:
+    map: pdf
+- name: basic_gencad
+  comment: PCB in GenCAD format
+  type: gencad
+  dir: Export
+- name: basic_gerb_drill
+  comment: Drill files in GERB_DRILL format
+  type: gerb_drill
+  dir: Gerbers_and_Drill
+  options:
+    map: gerber
+- name: gerber_modern
+  comment: Gerbers in modern format, recommended by the standard
+  type: gerber
+  dir: Gerbers_and_Drill
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: Elecrow_gerbers
+  comment: Gerbers compatible with Elecrow
+  type: gerber
+  dir: Manufacturers/Elecrow
+  extends: _Elecrow_gerbers
+  disable_run_by_default: true
+  layers: &id002
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+- name: Elecrow_drill
+  comment: Drill files compatible with Elecrow
+  type: excellon
+  dir: Manufacturers/Elecrow
+  extends: _Elecrow_drill
+  disable_run_by_default: true
+- name: Elecrow
+  comment: ZIP file for Elecrow
+  type: compress
+  dir: Manufacturers
+  extends: ''
+  disable_run_by_default: _Elecrow_compress
+  options:
+    files:
+    - from_output: Elecrow_gerbers
+      dest: /
+    - from_output: Elecrow_drill
+      dest: /
+- name: JLCPCB_gerbers
+  comment: Gerbers compatible with JLCPCB
+  type: gerber
+  dir: Manufacturers/JLCPCB
+  extends: _JLCPCB_gerbers
+  disable_run_by_default: true
+  layers: *id002
+- name: JLCPCB_drill
+  comment: Drill files compatible with JLCPCB
+  type: excellon
+  dir: Manufacturers/JLCPCB
+  extends: _JLCPCB_drill
+  disable_run_by_default: true
+- name: JLCPCB_position
+  comment: Pick and place file, JLCPCB style
+  type: position
+  dir: Manufacturers/JLCPCB
+  extends: _JLCPCB_position
+  disable_run_by_default: true
+  options:
+    pre_transform:
+    - _kicost_rename
+    - _rot_footprint
+- name: JLCPCB_bom
+  comment: BoM for JLCPCB
+  type: bom
+  dir: Manufacturers/JLCPCB
+  extends: _JLCPCB_bom
+  disable_run_by_default: true
+- name: JLCPCB
+  comment: ZIP file for JLCPCB
+  type: compress
+  dir: Manufacturers
+  extends: ''
+  disable_run_by_default: _JLCPCB_compress
+  options:
+    files:
+    - from_output: JLCPCB_gerbers
+      dest: /
+    - from_output: JLCPCB_drill
+      dest: /
+    - from_output: JLCPCB_position
+      dest: /
+    - from_output: JLCPCB_bom
+      dest: /
+- name: FusionPCB_gerbers
+  comment: Gerbers compatible with FusionPCB
+  type: gerber
+  dir: Manufacturers/FusionPCB
+  extends: _FusionPCB_gerbers
+  disable_run_by_default: true
+  layers: *id002
+- name: FusionPCB_drill
+  comment: Drill files compatible with FusionPCB
+  type: excellon
+  dir: Manufacturers/FusionPCB
+  extends: _FusionPCB_drill
+  disable_run_by_default: true
+- name: FusionPCB
+  comment: ZIP file for FusionPCB
+  type: compress
+  dir: Manufacturers
+  extends: ''
+  disable_run_by_default: _FusionPCB_compress
+  options:
+    files:
+    - from_output: FusionPCB_gerbers
+      dest: /
+    - from_output: FusionPCB_drill
+      dest: /
+- name: PCBWay_gerbers
+  comment: Gerbers compatible with PCBWay
+  type: gerber
+  dir: Manufacturers/PCBWay
+  extends: _PCBWay_gerbers
+  disable_run_by_default: true
+  layers: *id002
+- name: PCBWay_drill
+  comment: Drill files compatible with PCBWay
+  type: excellon
+  dir: Manufacturers/PCBWay
+  extends: _PCBWay_drill
+  disable_run_by_default: true
+- name: PCBWay
+  comment: ZIP file for PCBWay
+  type: compress
+  dir: Manufacturers
+  extends: ''
+  disable_run_by_default: _PCBWay_compress
+  options:
+    files:
+    - from_output: PCBWay_gerbers
+      dest: /
+    - from_output: PCBWay_drill
+      dest: /
+- name: basic_hpgl
+  comment: Individual layers in HPGL format
+  type: hpgl
+  dir: Individual_Layers/HPGL
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: basic_hpgl_sch_print
+  comment: Schematic in HPGL format
+  type: hpgl_sch_print
+  dir: Schematic
+- name: basic_ibom
+  comment: Interactive HTML BoM
+  type: ibom
+  dir: Assembly
+- name: basic_info
+  comment: Information about the run
+  type: info
+  dir: .
+- name: basic_kikit_present
+  comment: Simple project presentation
+  type: kikit_present
+  dir: Presentation
+  options:
+    description: '# Presentation for tornblue
+
+      This is an automatically generated presentation page'
+    boards:
+      mode: local
+      comment: Resources included
+      front_image: renderer_for_present
+      back_image: renderer_for_present
+      gerbers: gerbers_for_present
+- name: renderer_for_present
+  comment: Renderer for the presentation
+  type: pcbdraw
+  dir: Render_for_presentation
+  run_by_default: false
+- name: gerbers_for_present
+  comment: Gerbers for the presentation
+  type: gerber
+  dir: Gerber_for_presentation
+  layers: copper
+  run_by_default: false
+- name: basic_navigate_results
+  comment: Web page to browse the results
+  type: navigate_results
+  dir: Browse
+  options:
+    link_from_root: index.html
+- name: classic_netlist
+  comment: Schematic netlist in KiCad format
+  type: netlist
+  dir: Export
+- name: ipc_netlist
+  comment: IPC-D-356 netlist for testing
+  type: netlist
+  dir: Export
+  options:
+    format: ipc
+#- name: panel
+#  comment: Create a 4x4 complex panel
+#  type: panelize
+#  dir: Panel
+#  options:
+#    title: + (Panel)
+#    units: mm
+#    create_preview: true
+#    configs:
+#    - layout:
+#        rows: 4
+#        cols: 4
+#        space: 2
+#        hbackbone: 5
+#        vbackbone: 5
+#        hboneskip: 1
+#        vboneskip: 1
+#      page:
+#        size: A0
+#      tabs:
+#        type: fixed
+#        width: 3
+#        vcount: 2
+#        hcount: 0
+#      cuts:
+#        type: mousebites
+#        drill: 0.5
+#        spacing: 1mm
+#        offset: 0.2
+#        prolong: 0.5
+#      framing:
+#        type: railstb
+#        width: 5
+#        space: 3
+#      copperfill:
+#        type: hatched
+#        clearance: 2
+#        spacing: 0.5
+#        width: 0.5
+#      tooling:
+#        type: 3hole
+#        hoffset: 2.5
+#        voffset: 2.5
+#        size: 1.5
+#      fiducials:
+#        type: 3fid
+#        hoffset: 5
+#        voffset: 2.5
+#        coppersize: 2
+#        opening: 1
+#      text:
+#        text: Panel for {boardTitle}
+#        anchor: mt
+#        voffset: 2.5
+#        hjustify: center
+#        vjustify: center
+#      post:
+#        millradius: 1
+- name: basic_pcb_print_pdf
+  comment: PCB
+  type: pcb_print
+  dir: PCB/PDF
+  options:
+    format: PDF
+    pages:
+    - layers:
+      - layer: F.Cu
+      - layer: F.Mask
+        color: '#14332440'
+      - layer: F.Paste
+      - layer: F.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front copper
+    - layers:
+      - layer: B.Cu
+      - layer: B.Mask
+        color: '#14332440'
+      - layer: B.Paste
+      - layer: B.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom copper
+    - layers:
+      - layer: B.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom courtyard area
+    - layers:
+      - layer: F.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front courtyard area
+    - layers:
+      - layer: B.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom documentation
+    - layers:
+      - layer: F.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front documentation
+    keep_temporal_files: true
+- name: basic_pcb_print_svg
+  comment: PCB
+  type: pcb_print
+  dir: PCB/SVG
+  options:
+    format: SVG
+    pages:
+    - layers:
+      - layer: F.Cu
+      - layer: F.Mask
+        color: '#14332440'
+      - layer: F.Paste
+      - layer: F.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front copper
+    - layers:
+      - layer: B.Cu
+      - layer: B.Mask
+        color: '#14332440'
+      - layer: B.Paste
+      - layer: B.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom copper
+    - layers:
+      - layer: B.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom courtyard area
+    - layers:
+      - layer: F.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front courtyard area
+    - layers:
+      - layer: B.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom documentation
+    - layers:
+      - layer: F.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front documentation
+    keep_temporal_files: true
+    add_background: true
+- name: basic_pcb_print_png
+  comment: PCB
+  type: pcb_print
+  dir: PCB/PNG
+  options:
+    format: PNG
+    pages:
+    - layers:
+      - layer: F.Cu
+      - layer: F.Mask
+        color: '#14332440'
+      - layer: F.Paste
+      - layer: F.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front copper
+    - layers:
+      - layer: B.Cu
+      - layer: B.Mask
+        color: '#14332440'
+      - layer: B.Paste
+      - layer: B.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom copper
+    - layers:
+      - layer: B.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom courtyard area
+    - layers:
+      - layer: F.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front courtyard area
+    - layers:
+      - layer: B.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom documentation
+    - layers:
+      - layer: F.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front documentation
+    keep_temporal_files: true
+    add_background: true
+- name: basic_pcb_print_eps
+  comment: PCB
+  type: pcb_print
+  dir: PCB/EPS
+  options:
+    format: EPS
+    pages:
+    - layers:
+      - layer: F.Cu
+      - layer: F.Mask
+        color: '#14332440'
+      - layer: F.Paste
+      - layer: F.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front copper
+    - layers:
+      - layer: B.Cu
+      - layer: B.Mask
+        color: '#14332440'
+      - layer: B.Paste
+      - layer: B.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom copper
+    - layers:
+      - layer: B.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom courtyard area
+    - layers:
+      - layer: F.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front courtyard area
+    - layers:
+      - layer: B.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom documentation
+    - layers:
+      - layer: F.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front documentation
+    keep_temporal_files: true
+- name: basic_pcb_print_ps
+  comment: PCB
+  type: pcb_print
+  dir: PCB/PS
+  options:
+    format: PS
+    pages:
+    - layers:
+      - layer: F.Cu
+      - layer: F.Mask
+        color: '#14332440'
+      - layer: F.Paste
+      - layer: F.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front copper
+    - layers:
+      - layer: B.Cu
+      - layer: B.Mask
+        color: '#14332440'
+      - layer: B.Paste
+      - layer: B.Silkscreen
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom copper
+    - layers:
+      - layer: B.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom courtyard area
+    - layers:
+      - layer: F.Courtyard
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front courtyard area
+    - layers:
+      - layer: B.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      mirror: true
+      sheet: Bottom documentation
+    - layers:
+      - layer: F.Fab
+      - layer: Edge.Cuts
+      - layer: User.Drawings
+      - layer: User.Comments
+      - layer: User.Eco1
+      - layer: User.Eco2
+      sheet: Front documentation
+    keep_temporal_files: true
+- name: basic_pcbdraw_svg_jlcpcb_green_enig_top
+  comment: PCB 2D render in SVG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: svg
+- name: basic_pcbdraw_png_jlcpcb_green_enig_top
+  comment: PCB 2D render in PNG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: png
+- name: basic_pcbdraw_jpg_jlcpcb_green_enig_top
+  comment: PCB 2D render in JPG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: jpg
+- name: basic_pcbdraw_svg_set_blue_enig_top
+  comment: PCB 2D render in SVG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: svg
+- name: basic_pcbdraw_png_set_blue_enig_top
+  comment: PCB 2D render in PNG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: png
+- name: basic_pcbdraw_jpg_set_blue_enig_top
+  comment: PCB 2D render in JPG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: jpg
+- name: basic_pcbdraw_svg_set_red_hasl_top
+  comment: PCB 2D render in SVG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: svg
+- name: basic_pcbdraw_png_set_red_hasl_top
+  comment: PCB 2D render in PNG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: png
+- name: basic_pcbdraw_jpg_set_red_hasl_top
+  comment: PCB 2D render in JPG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: jpg
+- name: basic_pcbdraw_svg_jlcpcb_green_enig_bottom
+  comment: PCB 2D render in SVG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: svg
+    bottom: true
+- name: basic_pcbdraw_png_jlcpcb_green_enig_bottom
+  comment: PCB 2D render in PNG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: png
+    bottom: true
+- name: basic_pcbdraw_jpg_jlcpcb_green_enig_bottom
+  comment: PCB 2D render in JPG format, using jlcpcb-green-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/jlcpcb_green_enig
+  options:
+    style: jlcpcb-green-enig
+    format: jpg
+    bottom: true
+- name: basic_pcbdraw_svg_set_blue_enig_bottom
+  comment: PCB 2D render in SVG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: svg
+    bottom: true
+- name: basic_pcbdraw_png_set_blue_enig_bottom
+  comment: PCB 2D render in PNG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: png
+    bottom: true
+- name: basic_pcbdraw_jpg_set_blue_enig_bottom
+  comment: PCB 2D render in JPG format, using set-blue-enig style
+  type: pcbdraw
+  dir: PCB/2D_render/set_blue_enig
+  options:
+    style: set-blue-enig
+    format: jpg
+    bottom: true
+- name: basic_pcbdraw_svg_set_red_hasl_bottom
+  comment: PCB 2D render in SVG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: svg
+    bottom: true
+- name: basic_pcbdraw_png_set_red_hasl_bottom
+  comment: PCB 2D render in PNG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: png
+    bottom: true
+- name: basic_pcbdraw_jpg_set_red_hasl_bottom
+  comment: PCB 2D render in JPG format, using set-red-hasl style
+  type: pcbdraw
+  dir: PCB/2D_render/set_red_hasl
+  options:
+    style: set-red-hasl
+    format: jpg
+    bottom: true
+- name: basic_pdf
+  comment: Individual layers in PDF format
+  type: pdf
+  dir: Individual_Layers/PDF
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: basic_pdf_sch_print
+  comment: Schematic in PDF format
+  type: pdf_sch_print
+  dir: Schematic
+- name: basic_position_ASCII
+  comment: Components position for Pick & Place
+  type: position
+  dir: Position
+  options:
+    format: ASCII
+    only_smd: false
+- name: basic_position_CSV
+  comment: Components position for Pick & Place
+  type: position
+  dir: Position
+  options:
+    format: CSV
+    only_smd: false
+- name: basic_ps
+  comment: Individual layers in PS format
+  type: ps
+  dir: Individual_Layers/PS
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: basic_ps_sch_print
+  comment: Schematic in PS format
+  type: ps_sch_print
+  dir: Schematic
+- name: basic_qr_lib_example
+  comment: QR code symbol and footprint example
+  type: qr_lib
+  dir: QR_libs
+  options:
+    qrs:
+    - correction_level: medium
+      name: QR_data
+      pcb_negative: true
+    - correction_level: medium
+      name: QR_kibot
+      text: https://github.com/INTI-CMNB/KiBot/
+    use_sch_dir: false
+- name: basic_render_3d_top
+  comment: 3D view from top
+  type: render_3d
+  dir: 3D
+  options:
+    ray_tracing: true
+    orthographic: true
+- name: basic_render_3d_30deg
+  comment: 3D view from 30 degrees
+  type: render_3d
+  dir: 3D
+  output_id: 30deg
+  options:
+    ray_tracing: true
+    rotate_x: 3
+    rotate_z: -2
+- name: basic_render_3d_bottom
+  comment: 3D view from bottom
+  type: render_3d
+  dir: 3D
+  options:
+    ray_tracing: true
+    orthographic: true
+    view: bottom
+- name: report_simple
+  comment: Simple design report
+  type: report
+  output_id: _simple
+  options:
+    template: simple_ASCII
+    do_convert: true
+- name: report_full
+  comment: Full design report
+  type: report
+  options:
+    template: full_SVG
+    do_convert: true
+- name: basic_stencil_3d
+  comment: 3D self-registering stencil
+  type: stencil_3d
+  dir: Assembly
+- name: basic_stencil_for_jig
+  comment: Steel stencil for alignment jig
+  type: stencil_for_jig
+  dir: Assembly
+  options:
+    jigwidth: 200
+    jigheight: 250
+- name: basic_step
+  comment: 3D model in STEP format
+  type: step
+  dir: 3D
+- name: basic_svg
+  comment: Individual layers in SVG format
+  type: svg
+  dir: Individual_Layers/SVG
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Paste
+    suffix: B_Paste
+    description: Bottom solder paste
+  - layer: F.Paste
+    suffix: F_Paste
+    description: Front solder paste
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: User.Drawings
+    suffix: User_Drawings
+    description: User drawings
+  - layer: User.Comments
+    suffix: User_Comments
+    description: User comments
+  - layer: User.Eco1
+    suffix: User_Eco1
+    description: For user usage 1
+  - layer: User.Eco2
+    suffix: User_Eco2
+    description: For user usage 2
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+  - layer: B.Fab
+    suffix: B_Fab
+    description: Bottom documentation
+  - layer: F.Fab
+    suffix: F_Fab
+    description: Front documentation
+- name: basic_svg_sch_print
+  comment: Schematic in SVG format
+  type: svg_sch_print
+  dir: Schematic
+- name: basic_vrml
+  comment: PCB in VRML format
+  type: vrml
+  dir: 3D
