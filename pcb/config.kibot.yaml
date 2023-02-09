@@ -14,7 +14,7 @@ import:
 - file: FusionPCB
 - file: JLCPCB
 - file: MacroFab_XYRS
-- file: PCB2Blender_2_1
+#- file: PCB2Blender_2_1
 - file: PCBWay
 
 outputs:
@@ -226,18 +226,18 @@ outputs:
     new_type: git
     cache_dir: /github/workspace/.cache
     add_link_id: true
-- name: basic_diff_sch
-  comment: Schematic diff between the last two changes
-  type: diff
-  dir: diff
-  options:
-    old: KIBOT_LAST-1
-    old_type: git
-    new: HEAD
-    new_type: git
-    cache_dir: /github/workspace/.cache
-    add_link_id: true
-    pcb: false
+#- name: basic_diff_sch
+#  comment: Schematic diff between the last two changes
+#  type: diff
+#  dir: diff
+#  options:
+#    old: KIBOT_LAST-1
+#    old_type: git
+#    new: HEAD
+#    new_type: git
+#    cache_dir: /github/workspace/.cache
+#    add_link_id: true
+#    pcb: false
 - name: basic_download_datasheets
   comment: Download the datasheets
   type: download_datasheets
@@ -755,276 +755,276 @@ outputs:
       - layer: User.Eco2
       sheet: Front documentation
     keep_temporal_files: true
-- name: basic_pcb_print_svg
-  comment: PCB
-  type: pcb_print
-  dir: PCB/SVG
-  options:
-    format: SVG
-    pages:
-    - layers:
-      - layer: F.Cu
-      - layer: F.Mask
-        color: '#14332440'
-      - layer: F.Paste
-      - layer: F.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front copper
-    - layers:
-      - layer: B.Cu
-      - layer: B.Mask
-        color: '#14332440'
-      - layer: B.Paste
-      - layer: B.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom copper
-    - layers:
-      - layer: B.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom courtyard area
-    - layers:
-      - layer: F.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front courtyard area
-    - layers:
-      - layer: B.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom documentation
-    - layers:
-      - layer: F.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front documentation
-    keep_temporal_files: true
-    add_background: true
-- name: basic_pcb_print_png
-  comment: PCB
-  type: pcb_print
-  dir: PCB/PNG
-  options:
-    format: PNG
-    pages:
-    - layers:
-      - layer: F.Cu
-      - layer: F.Mask
-        color: '#14332440'
-      - layer: F.Paste
-      - layer: F.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front copper
-    - layers:
-      - layer: B.Cu
-      - layer: B.Mask
-        color: '#14332440'
-      - layer: B.Paste
-      - layer: B.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom copper
-    - layers:
-      - layer: B.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom courtyard area
-    - layers:
-      - layer: F.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front courtyard area
-    - layers:
-      - layer: B.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom documentation
-    - layers:
-      - layer: F.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front documentation
-    keep_temporal_files: true
-    add_background: true
-- name: basic_pcb_print_eps
-  comment: PCB
-  type: pcb_print
-  dir: PCB/EPS
-  options:
-    format: EPS
-    pages:
-    - layers:
-      - layer: F.Cu
-      - layer: F.Mask
-        color: '#14332440'
-      - layer: F.Paste
-      - layer: F.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front copper
-    - layers:
-      - layer: B.Cu
-      - layer: B.Mask
-        color: '#14332440'
-      - layer: B.Paste
-      - layer: B.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom copper
-    - layers:
-      - layer: B.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom courtyard area
-    - layers:
-      - layer: F.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front courtyard area
-    - layers:
-      - layer: B.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom documentation
-    - layers:
-      - layer: F.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front documentation
-    keep_temporal_files: true
-- name: basic_pcb_print_ps
-  comment: PCB
-  type: pcb_print
-  dir: PCB/PS
-  options:
-    format: PS
-    pages:
-    - layers:
-      - layer: F.Cu
-      - layer: F.Mask
-        color: '#14332440'
-      - layer: F.Paste
-      - layer: F.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front copper
-    - layers:
-      - layer: B.Cu
-      - layer: B.Mask
-        color: '#14332440'
-      - layer: B.Paste
-      - layer: B.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom copper
-    - layers:
-      - layer: B.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom courtyard area
-    - layers:
-      - layer: F.Courtyard
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front courtyard area
-    - layers:
-      - layer: B.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      mirror: true
-      sheet: Bottom documentation
-    - layers:
-      - layer: F.Fab
-      - layer: Edge.Cuts
-      - layer: User.Drawings
-      - layer: User.Comments
-      - layer: User.Eco1
-      - layer: User.Eco2
-      sheet: Front documentation
-    keep_temporal_files: true
+#- name: basic_pcb_print_svg
+#  comment: PCB
+#  type: pcb_print
+#  dir: PCB/SVG
+#  options:
+#    format: SVG
+#    pages:
+#    - layers:
+#      - layer: F.Cu
+#      - layer: F.Mask
+#        color: '#14332440'
+#      - layer: F.Paste
+#      - layer: F.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front copper
+#    - layers:
+#      - layer: B.Cu
+#      - layer: B.Mask
+#        color: '#14332440'
+#      - layer: B.Paste
+#      - layer: B.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom copper
+#    - layers:
+#      - layer: B.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom courtyard area
+#    - layers:
+#      - layer: F.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front courtyard area
+#    - layers:
+#      - layer: B.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom documentation
+#    - layers:
+#      - layer: F.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front documentation
+#    keep_temporal_files: true
+#    add_background: true
+#- name: basic_pcb_print_png
+#  comment: PCB
+#  type: pcb_print
+#  dir: PCB/PNG
+#  options:
+#    format: PNG
+#    pages:
+#    - layers:
+#      - layer: F.Cu
+#      - layer: F.Mask
+#        color: '#14332440'
+#      - layer: F.Paste
+#      - layer: F.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front copper
+#    - layers:
+#      - layer: B.Cu
+#      - layer: B.Mask
+#        color: '#14332440'
+#      - layer: B.Paste
+#      - layer: B.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom copper
+#    - layers:
+#      - layer: B.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom courtyard area
+#    - layers:
+#      - layer: F.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front courtyard area
+#    - layers:
+#      - layer: B.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom documentation
+#    - layers:
+#      - layer: F.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front documentation
+#    keep_temporal_files: true
+#    add_background: true
+#- name: basic_pcb_print_eps
+#  comment: PCB
+#  type: pcb_print
+#  dir: PCB/EPS
+#  options:
+#    format: EPS
+#    pages:
+#    - layers:
+#      - layer: F.Cu
+#      - layer: F.Mask
+#        color: '#14332440'
+#      - layer: F.Paste
+#      - layer: F.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front copper
+#    - layers:
+#      - layer: B.Cu
+#      - layer: B.Mask
+#        color: '#14332440'
+#      - layer: B.Paste
+#      - layer: B.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom copper
+#    - layers:
+#      - layer: B.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom courtyard area
+#    - layers:
+#      - layer: F.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front courtyard area
+#    - layers:
+#      - layer: B.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom documentation
+#    - layers:
+#      - layer: F.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front documentation
+#    keep_temporal_files: true
+#- name: basic_pcb_print_ps
+#  comment: PCB
+#  type: pcb_print
+#  dir: PCB/PS
+#  options:
+#    format: PS
+#    pages:
+#    - layers:
+#      - layer: F.Cu
+#      - layer: F.Mask
+#        color: '#14332440'
+#      - layer: F.Paste
+#      - layer: F.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front copper
+#    - layers:
+#      - layer: B.Cu
+#      - layer: B.Mask
+#        color: '#14332440'
+#      - layer: B.Paste
+#      - layer: B.Silkscreen
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom copper
+#    - layers:
+#      - layer: B.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom courtyard area
+#    - layers:
+#      - layer: F.Courtyard
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front courtyard area
+#    - layers:
+#      - layer: B.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      mirror: true
+#      sheet: Bottom documentation
+#    - layers:
+#      - layer: F.Fab
+#      - layer: Edge.Cuts
+#      - layer: User.Drawings
+#      - layer: User.Comments
+#      - layer: User.Eco1
+#      - layer: User.Eco2
+#      sheet: Front documentation
+#    keep_temporal_files: true
 - name: basic_pcbdraw_svg_jlcpcb_green_enig_top
   comment: PCB 2D render in SVG format, using jlcpcb-green-enig style
   type: pcbdraw
@@ -1307,30 +1307,30 @@ outputs:
       name: QR_kibot
       text: https://github.com/INTI-CMNB/KiBot/
     use_sch_dir: false
-- name: basic_render_3d_top
-  comment: 3D view from top
-  type: render_3d
-  dir: 3D
-  options:
-    ray_tracing: true
-    orthographic: true
-- name: basic_render_3d_30deg
-  comment: 3D view from 30 degrees
-  type: render_3d
-  dir: 3D
-  output_id: 30deg
-  options:
-    ray_tracing: true
-    rotate_x: 3
-    rotate_z: -2
-- name: basic_render_3d_bottom
-  comment: 3D view from bottom
-  type: render_3d
-  dir: 3D
-  options:
-    ray_tracing: true
-    orthographic: true
-    view: bottom
+#- name: basic_render_3d_top
+#  comment: 3D view from top
+#  type: render_3d
+#  dir: 3D
+#  options:
+#    ray_tracing: true
+#    orthographic: true
+#- name: basic_render_3d_30deg
+#  comment: 3D view from 30 degrees
+#  type: render_3d
+#  dir: 3D
+#  output_id: 30deg
+#  options:
+#    ray_tracing: true
+#    rotate_x: 3
+#    rotate_z: -2
+#- name: basic_render_3d_bottom
+#  comment: 3D view from bottom
+#  type: render_3d
+#  dir: 3D
+#  options:
+#    ray_tracing: true
+#    orthographic: true
+#    view: bottom
 - name: report_simple
   comment: Simple design report
   type: report
@@ -1348,17 +1348,17 @@ outputs:
   comment: 3D self-registering stencil
   type: stencil_3d
   dir: Assembly
-- name: basic_stencil_for_jig
-  comment: Steel stencil for alignment jig
-  type: stencil_for_jig
-  dir: Assembly
-  options:
-    jigwidth: 200
-    jigheight: 250
-- name: basic_step
-  comment: 3D model in STEP format
-  type: step
-  dir: 3D
+#- name: basic_stencil_for_jig
+#  comment: Steel stencil for alignment jig
+#  type: stencil_for_jig
+#  dir: Assembly
+#  options:
+#    jigwidth: 200
+#    jigheight: 250
+#- name: basic_step
+#  comment: 3D model in STEP format
+#  type: step
+#  dir: 3D
 - name: basic_svg
   comment: Individual layers in SVG format
   type: svg
@@ -1419,7 +1419,7 @@ outputs:
   comment: Schematic in SVG format
   type: svg_sch_print
   dir: Schematic
-- name: basic_vrml
-  comment: PCB in VRML format
-  type: vrml
-  dir: 3D
+#- name: basic_vrml
+#  comment: PCB in VRML format
+#  type: vrml
+#  dir: 3D
