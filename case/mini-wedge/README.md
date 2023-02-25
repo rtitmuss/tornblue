@@ -1,6 +1,6 @@
 # Mini Wedge Case
 
-This is a plateless wedge style case with a 14 degree angle for 5 column tornblue keyboards. Please ask if you'd like the design modified for a 6 column tornblue or other angles.
+This is a plateless wedge style case with a 14 degree angle for 5 column tornblue keyboards.
 
 ## 3d printing
 
@@ -8,7 +8,11 @@ This is a plateless wedge style case with a 14 degree angle for 5 column tornblu
 
 You can 3d print a mini wedge case for your Tornblue using the follow files:
 
-[5 Mini Wedge.3mf](5_Mini_Wedge.3mf)
+#### 5 column case
+[Mini Wedge 5 column.3mf](Tornblue_Mini_Wedge_5col.3mf)
+
+#### 6 column case
+[Mini Wedge 6 column.3mf](Tornblue_Mini_Wedge_6col.3mf)
 
 No supports are required for the base. Print the case as a mirror image for the right side. When the case has printed you need to add four M3 heat set inserts in the bottom of each half of the case. The prints below use a 'fuzzy skin' to add some texture to the sides of the case.
 
@@ -18,7 +22,7 @@ You can optionally add up to 135g of weight in the bottom of the case. The case 
 
 ## Assembly
 
-Place the completed PCB on the base, taking care not to trap the battery cable. Use four M3 screws to attach the PCB to the base. Add adhesive feet to the underneath of the case.
+Place the completed PCB on the base, taking care not to trap the battery cable. Use four 6mm M3 button head screws to attach the PCB to the base. Add adhesive feet to the underneath of the case.
 
 Your keyboard is now finished, enjoy!
 

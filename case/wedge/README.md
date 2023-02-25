@@ -1,6 +1,6 @@
 # 3d Printed Wedge Case
 
-This is a wedge style case with a 14 degree angle for 5 column tornblue keyboards. Please ask if you'd like the design modified for a 6 column tornblue or other angles.
+This is a wedge style case with a 14 degree angle for 5 column tornblue keyboards.
 
 ## 3d printing
 
@@ -8,17 +8,30 @@ This is a wedge style case with a 14 degree angle for 5 column tornblue keyboard
 
 There is an optional 3d printable plate for MX switches. Remember to print and fit this before soldering your switches. The plate has cutouts for the roller encoder.
 
-[5_Plate.3mf](5_Plate.3mf)
+#### 5 column plate
+[Wedge 5 column Plate.3mf](Tornblue_Wedge_5col_Plate.3mf)
+
+#### 6 column plate
+[Wedge 6 column Plate.3mf](Tornblue_Wedge_6col_Plate.3mf)
+
 
 ### Case
 
 You can 3d print a wedge case for your Tornblue using the follow files:
 
-[5_Base.3mf](5_Base.3mf), [5_Edge.3mf](5_Edge.3mf)
-
 No supports are required for the base.
 
 The edge prints upside down so the visible surface is on the print bed. You need to print with supports.
+
+#### 5 column case
+[Wedge 5 column Base.3mf](Tornblue_Wedge_5col_Base.3mf)
+
+[Wedge 5 column Edge.3mf](Tornblue_Wedge_5col_Edge.3mf)
+
+#### 6 column case
+[Wedge 6 column Base.3mf](Tornblue_Wedge_6col_Base.3mf)
+
+[Wedge 6 column Edge.3mf](Tornblue_Wedge_6col_Edge.3mf)
 
 ## Post processing
 
@@ -40,11 +53,11 @@ You can optionally add up to 180g of weight in the bottom of the case. The case 
 
 ## Assembly
 
-Place the completed PCB on the base, taking care not to trap the battery cable. Use two M3 screws to attach the PCB to the base as shown below.
+Place the completed PCB on the base, taking care not to trap the battery cable. Use two 6mm M3 button head screws to attach the PCB to the base as shown below.
 
 ![](./img/PXL_20220313_112134795.MP.jpg)
 
-Carefully slide the case wall over the base. Check the clearance near the on/off switch. Use two M3 screws to swecure the top of the case.
+Carefully slide the case wall over the base. Check the clearance near the on/off switch. Use two 16mm M3 button head screws to swecure the top of the case.
 
 ![](./img/PXL_20220313_112420250.MP.jpg)
 
